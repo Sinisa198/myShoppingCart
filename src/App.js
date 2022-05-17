@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Title from '../public/index.html';
+import CartItem from './cart/CartItem';
 
 function App() {
   return (
-  <form>
-    <input type='text' />
-  </form>
+    <form>
+      <div>
+        <h1 className="title">Hello to my shopping cart</h1>
+        <CartItem />
+      </div>
+    </form>
   );
 }
 
