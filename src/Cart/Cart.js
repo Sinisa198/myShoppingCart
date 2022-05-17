@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Cart = () => ({  
-    render() {
+
+const Cart = () => {  
+    
   return (
 	  <div>
 	<div id="page" class="site">
@@ -10,7 +11,7 @@ const Cart = () => ({
 	<div class="header__overlay"></div>
 	<div class="wrap">
 		<div class="header__container">
-			<div class="logo-mobile"><a href="/" class="header__home"> <img src="/assets/images/logo-white.png" alt="" class="header__logo"/> </a></div>
+			<div class="header__home-logo"><a href="/" class="header__home"> <img src="/assets/images/LogoHeader.png" alt="" class="header__logo"/> </a></div>
 
 			
 				<nav class="main-nav">
@@ -18,28 +19,18 @@ const Cart = () => ({
 						
 							<li class="main-nav__list-item" role="menuitem">
 								<a href="javascript:;" class="main-nav__list-link">
-									<img src="" alt="" class="header__logo"/>
 									ABOUT US
 								</a>
 							</li>
 						
 							<li class="main-nav__list-item" role="menuitem">
 								<a href="javascript:;" class="main-nav__list-link">
-									<img src="" alt="" class="header__logo"/>
 									LOCATIONS
 								</a>
 							</li>
 						
-							<li class="main-nav__list-item main-nav__list-item--image" role="menuitem">
-								<a href="javascript:;" class="header__home-logo">
-									<img src="/assets/images/logo-white.png" alt="" class="header__logo"/>
-									
-								</a>
-							</li>
-						
 							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" class="main-nav__list-link">
-									<img src="" alt="" class="header__logo"/>
+								<a href="" class="main-nav__list-link">
 									SHOP
 								</a>
 							</li>
@@ -47,7 +38,7 @@ const Cart = () => ({
 					</ul>
 				</nav>
 				<div class="main-nav-cart">
-					<a href="javascript:;" class="main-nav-cart-link">
+					<a href="" class="main-nav-cart-link">
 						cart
 					</a>
 					<span class="main-nav-cart-qty">3</span>
@@ -63,75 +54,217 @@ const Cart = () => ({
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
 				
-	<div class="cart">
+	
+	<div class="cards">
 	<div class="wrap">
-		<div class="cart__container">
-			<div class="cart__top">
-				<div class="cart__top-btn">
-					<a class="btn btn--black" href="javascript:;">BACK TO SHOP</a>
-				</div>
-				<div class="cart__title">
-					<span class="pretitle">SHOP</span>
-					<h2 class="section-title">SAME OLD SAME OLD</h2>
-				</div>
-				<div class="cart__top-btn">
-					<a class="btn btn--black" href="javascript:;">CHECKOUT</a>
-				</div>
-			</div>
+		<div class="cards__container">
+			<span class="pretitle">SHOP</span>
+			<h2 class="section-title">SAME OLD SAME OLD</h2>
+
 			
-				<div class="row cart__wrapper">
+				<div class="row cards__wrapper">
 					
-						<div class="cart__item">
-							<div class="cart__item-body-image">
-								<img src="/assets/images/camera.png" alt="" class="cart__item-img"/>
-							</div>
-							<div class="cart__item-details">
-								<span class="cart__item-name">RANGEFINDER CAMERA</span>
-								<span class="cart__item-info">BRAND: ZENIT</span>
-								<span class="cart__item-info">YEAR OF MANUFACTURE: 1987</span>
-								<span class="cart__item-info">AMOUNT: 1</span>
-							</div>
-							<div class="cart__item-button">
-								<a class="btn btn--sm" href="javascript:;">REMOVE FROM CART</a>
-							</div>
-							<div class="cart__item-price">
-								<span class="cards__price">PRICE: <span>$36.5</span></span>
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="cards__item">
+								<div class="cards__item-body">
+									<div class="cards__item-body-image">
+										<img src="/assets/images/camera.png" alt="" class="cards__item-img"/>
+									</div>
+									<span class="cards__item-body-name">RANGEFINDER CAMERA</span>
+									<span class="cards__item-body-price">$36.5</span>
+								</div>
+								<div class="cards__item-footer">
+									<div class="quantity">
+										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<div class="quantity__button">
+											<button class="quantity-add js-inc quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+												</svg>
+											</button>
+											<button class="quantity-remove js-dec quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<div class="heart">
+										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+									</div>
+								</div>
 							</div>
 						</div>
 					
-						<div class="cart__item">
-							<div class="cart__item-body-image">
-								<img src="/assets/images/phone.png" alt="" class="cart__item-img"/>
-							</div>
-							<div class="cart__item-details">
-								<span class="cart__item-name">OLD DISK ROTARY PHONE</span>
-								<span class="cart__item-info">BRAND: Stella</span>
-								<span class="cart__item-info">YEAR OF MANUFACTURE: 1995</span>
-								<span class="cart__item-info">AMOUNT: 1</span>
-							</div>
-							<div class="cart__item-button">
-								<a class="btn btn--sm" href="javascript:;">REMOVE FROM CART</a>
-							</div>
-							<div class="cart__item-price">
-								<span class="cards__price">PRICE: <span>$2</span></span>
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="cards__item">
+								<div class="cards__item-body">
+									<div class="cards__item-body-image">
+										<img src="/assets/images/car.png" alt="" class="cards__item-img"/>
+									</div>
+									<span class="cards__item-body-name">FORD</span>
+									<span class="cards__item-body-price">$4994</span>
+								</div>
+								<div class="cards__item-footer">
+									<div class="quantity">
+										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<div class="quantity__button">
+											<button class="quantity-add js-inc quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+												</svg>
+											</button>
+											<button class="quantity-remove js-dec quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<div class="heart">
+										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+									</div>
+								</div>
 							</div>
 						</div>
 					
-						<div class="cart__item">
-							<div class="cart__item-body-image">
-								<img src="/assets/images/bicycle.png" alt="" class="cart__item-img"/>
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="cards__item">
+								<div class="cards__item-body">
+									<div class="cards__item-body-image">
+										<img src="/assets/images/phone.png" alt="" class="cards__item-img"/>
+									</div>
+									<span class="cards__item-body-name">OLD DISK ROTARY PHONE</span>
+									<span class="cards__item-body-price">$2</span>
+								</div>
+								<div class="cards__item-footer">
+									<div class="quantity">
+										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<div class="quantity__button">
+											<button class="quantity-add js-inc quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+												</svg>
+											</button>
+											<button class="quantity-remove js-dec quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<div class="heart">
+										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+									</div>
+								</div>
 							</div>
-							<div class="cart__item-details">
-								<span class="cart__item-name">RANGEFINDER CAMERA</span>
-								<span class="cart__item-info">BRAND: CLAUDE BUTLER</span>
-								<span class="cart__item-info">YEAR OF MANUFACTURE: 1997</span>
-								<span class="cart__item-info">AMOUNT: 1</span>
+						</div>
+					
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="cards__item">
+								<div class="cards__item-body">
+									<div class="cards__item-body-image">
+										<img src="/assets/images/tv.png" alt="" class="cards__item-img"/>
+									</div>
+									<span class="cards__item-body-name">RANGEFINDER CAMERA</span>
+									<span class="cards__item-body-price">$22.3</span>
+								</div>
+								<div class="cards__item-footer">
+									<div class="quantity">
+										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<div class="quantity__button">
+											<button class="quantity-add js-inc quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+												</svg>
+											</button>
+											<button class="quantity-remove js-dec quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<div class="heart">
+										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+									</div>
+								</div>
 							</div>
-							<div class="cart__item-button">
-								<a class="btn btn--sm" href="javascript:;">REMOVE FROM CART</a>
+						</div>
+					
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="cards__item">
+								<div class="cards__item-body">
+									<div class="cards__item-body-image">
+										<img src="/assets/images/horse.png" alt="" class="cards__item-img"/>
+									</div>
+									<span class="cards__item-body-name">ROCKING HORSE</span>
+									<span class="cards__item-body-price">$4994</span>
+								</div>
+								<div class="cards__item-footer">
+									<div class="quantity">
+										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<div class="quantity__button">
+											<button class="quantity-add js-inc quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+												</svg>
+											</button>
+											<button class="quantity-remove js-dec quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<div class="heart">
+										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+									</div>
+								</div>
 							</div>
-							<div class="cart__item-price">
-								<span class="cards__price">PRICE: <span>$10</span></span>
+						</div>
+					
+						<div class="col-xl-4 col-lg-4 col-md-6">
+							<div class="cards__item">
+								<div class="cards__item-body">
+									<div class="cards__item-body-image">
+										<img src="/assets/images/bicycle.png" alt="" class="cards__item-img"/>
+									</div>
+									<span class="cards__item-body-name">BICYCLE</span>
+									<span class="cards__item-body-price">$10.9</span>
+								</div>
+								<div class="cards__item-footer">
+									<div class="quantity">
+										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<div class="quantity__button">
+											<button class="quantity-add js-inc quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+												</svg>
+											</button>
+											<button class="quantity-remove js-dec quantity-button">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+													<path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<div class="heart">
+										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+									</div>
+								</div>
 							</div>
 						</div>
 					
@@ -151,16 +284,15 @@ const Cart = () => ({
 		<div class="footer__wrap">
 			<div class="footer__logo">
 				<a href="/" class="header__home">
-					<img src="/assets/images/logo.png" alt=""/>
+					<img src="/assets/images/LogoFooter.png" alt=""/>
 				</a>
 			</div>
-			<span class="copyright">Copyright © 2022 forwardslashny.com | All Rights Reserved.</span>
+			<div class="copyright"><span>Copyright © 2022 forwardslashny.com</span> <span class="copyright-line">|</span> <span>All Rights Reserved.</span></div>
 		</div>
 	</div>
 </footer>
+
 </div>
 </div>
-  );
-	}})
-  
-export default Cart
+  )};
+export default Cart;
