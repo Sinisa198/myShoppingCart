@@ -1,68 +1,16 @@
 import React from 'react'
-import Cart from '.Cart.css';
+
 
 const Cart = () => ({
     render() {
   return (
-        <div id="page" className="site">
-	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
-	<header className="header js-site-header">
-	<div className="header__overlay"></div>
-	<div className="wrap">
-		<div className="header__container">
-			<div className="logo-mobile"><a href="/" className="header__home"> <img src="/assets/images/logo-white.png" alt="" className="header__logo"/> </a></div>
-
-			
-				<nav className="main-nav">
-					<ul className="main-nav__list" role="menubar">
-						
-							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
-									<img src="" alt="" className="header__logo"/>
-									ABOUT US
-								</a>
-							</li>
-						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
-									<img src="" alt="" className="header__logo"/>
-									LOCATIONS
-								</a>
-							</li>
-						
-							<li className="main-nav__list-item main-nav__list-item--image" role="menuitem">
-								<a href="javascript:;" className="header__home-logo">
-									<img src="/assets/images/logo-white.png" alt="" className="header__logo"/>
-									
-								</a>
-							</li>
-						
-							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
-									<img src="" alt="" className="header__logo"/>
-									SHOP
-								</a>
-							</li>
-						
-					</ul>
-				</nav>
-				<div className="main-nav-cart">
-					<a href="javascript:;" className="main-nav-cart-link">
-						cart
-					</a>
-					<span className="main-nav-cart-qty">3</span>
-				</div>
-			
-			<a href="javascript:" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
-		</div>
-	</div>
-</header>
-
+       <div>
+		
 
 	<div id="content" className="site-content">
 		<div id="primary" className="content-area">
 			<main id="main" classNames="site-main">
-				
+		
 	<div className="cart">
 	<div className="wrap">
 		<div className="cart__container">

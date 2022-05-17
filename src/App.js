@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Nav from './NavBar/Nav';
-import Cart from './cartItem/Cart';
+import NavMeni from './NavMeni/NavMeni';
+import Cart from './Cart/Cart';
 
 function App() {
   return (
     <div>
-      <Nav />
+      <NavMeni />
       <Cart />
     </div>
   );

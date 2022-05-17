@@ -1,6 +1,4 @@
 import React from 'react'
-import Nav from 'Nav.css'; 
-
 const Nav = () => ({
     render() {
   return (
