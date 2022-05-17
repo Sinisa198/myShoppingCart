@@ -1,12 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import NavMeni from './NavMeni/NavMeni';
-import Cart from './Cart/Cart';
-import HomePage  from './HomePage';
+import navMenu from './components/navMenu/navMenu';
+import Cart from './components/cart/cart';
+import HomePage  from './components/Home/HomePage';
+
+
 function App() {
   return (
     <div>
-      <HomePage />
+      <navMenu />
+      <HomePage></HomePage>
     </div>
   );
 }

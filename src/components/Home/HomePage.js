@@ -1,11 +1,12 @@
-import React from 'react'
+import { render } from '@testing-library/react'
+import React from 'react';
 
 
-const Cart = () => {  
-    
+
+const HomePage = () => {
+   
   return (
-	  <div>
-	<div id="page" class="site">
+    <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header class="header js-site-header">
 	<div class="header__overlay"></div>
@@ -14,29 +15,7 @@ const Cart = () => {
 			<div class="header__home-logo"><a href="/" class="header__home"> <img src="/assets/images/LogoHeader.png" alt="" class="header__logo"/> </a></div>
 
 			
-				<nav class="main-nav">
-					<ul class="main-nav__list" role="menubar">
-						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" class="main-nav__list-link">
-									ABOUT US
-								</a>
-							</li>
-						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" class="main-nav__list-link">
-									LOCATIONS
-								</a>
-							</li>
-						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="" class="main-nav__list-link">
-									SHOP
-								</a>
-							</li>
-						
-					</ul>
-				</nav>
+				
 				<div class="main-nav-cart">
 					<a href="" class="main-nav-cart-link">
 						cart
@@ -58,7 +37,6 @@ const Cart = () => {
 	<div class="cards">
 	<div class="wrap">
 		<div class="cards__container">
-			<span class="pretitle">SHOP</span>
 			<h2 class="section-title">SAME OLD SAME OLD</h2>
 
 			
@@ -75,7 +53,7 @@ const Cart = () => {
 								</div>
 								<div class="cards__item-footer">
 									<div class="quantity">
-										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<input class="qty" type="number" step="1" min="1" value="0" />
 										<div class="quantity__button">
 											<button class="quantity-add js-inc quantity-button">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -109,7 +87,7 @@ const Cart = () => {
 								</div>
 								<div class="cards__item-footer">
 									<div class="quantity">
-										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<input class="qty" type="number" step="1" min="1" value="0" />
 										<div class="quantity__button">
 											<button class="quantity-add js-inc quantity-button">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -143,7 +121,7 @@ const Cart = () => {
 								</div>
 								<div class="cards__item-footer">
 									<div class="quantity">
-										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<input class="qty" type="number" step="1" min="1" value="0" />
 										<div class="quantity__button">
 											<button class="quantity-add js-inc quantity-button">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -293,6 +271,7 @@ const Cart = () => {
 </footer>
 
 </div>
-</div>
-  )};
-export default Cart;
+  );
+};
+
+export default HomePage
