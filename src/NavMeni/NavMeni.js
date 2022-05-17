@@ -1,7 +1,9 @@
 import React from 'react'
 const Nav = () => ({
+
     render() {
   return (
+	  	
 		<div className="header__container">
 			<div className="header__home-logo"><a href="/" className="header__home"> <img src="/assets/images/LogoHeader.png" alt="" className="header__logo"/> </a></div>
 
