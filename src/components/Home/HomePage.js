@@ -1,26 +1,30 @@
 import { render } from '@testing-library/react'
 import React from 'react';
-
+import {Button} from 'react';
+import {useNavigate} from 'react';
 
 
 const HomePage = () => {
-   
+
+
+
   return (
+	  
     <div id="page" class="site">
+		<navMenu />
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header class="header js-site-header">
 	<div class="header__overlay"></div>
 	<div class="wrap">
 		<div class="header__container">
-			<div class="header__home-logo"><a href="/" class="header__home"> <img src="/assets/images/LogoHeader.png" alt="" class="header__logo"/> </a></div>
-
+			<div class="header__home-logo"><a href="/" class="header__home"> <img src={'./components/phone.png'} alt="" class="header__logo"/> </a></div>
 			
 				
 				<div class="main-nav-cart">
-					<a href="" class="main-nav-cart-link">
+					<a  href="" class="main-nav-cart-link" >
 						cart
 					</a>
-					<span class="main-nav-cart-qty">3</span>
+					<span class="main-nav-cart-qty">7</span>
 				</div>
 			
 			<a href="javascript:" class="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -274,4 +278,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage
+export default HomePage;

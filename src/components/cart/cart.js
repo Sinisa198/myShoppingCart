@@ -1,11 +1,11 @@
 import React from 'react'
-
+import './Cart.css';
 const Cart = () => {  
 
   return (
 	  <div>
 	<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header class="header js-site-header">
 	<div class="header__overlay"></div>
 	<div class="wrap">
