@@ -2,7 +2,6 @@ import { render } from '@testing-library/react'
 import React from 'react';
 import {Button, useNavigate, useState} from 'react';
 import logoHeader from '../../assets/images/LogoHeader.png'
-import logoFooter from '../../assets/images/LogoFooter.png'
 import camera from '../../assets/images/camera.png'
 import favorite from '../../assets/images/favorite.png'
 import bicycle from '../../assets/images/bicycle.png'
@@ -10,12 +9,15 @@ import tv from '../../assets/images/tv.png'
 import car from '../../assets/images/car.png'
 import phone from '../../assets/images/phone.png'
 import horse from '../../assets/images/horse.png'
-	const HomePage = () => {
+
+	export const HomePage = () => {
+	
+	
 
 const [home, setHome] = useState();
 
   return (
-	  
+	    
     <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header class="header js-site-header">
@@ -49,10 +51,10 @@ const [home, setHome] = useState();
 					</ul>
 				</nav>
 				<div class="main-nav-cart">
-					<a href="" class="main-nav-cart-link">
-						cart
+					<a href="" class="main-nav-cart-link" >
+						Cart
 					</a>
-					<span class="main-nav-cart-qty">3</span>
+					<span class="main-nav-cart-qty">6</span>
 				</div>
 			
 			<a href="javascript:" class="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -60,6 +62,7 @@ const [home, setHome] = useState();
 	</div>
 </header>
 
+	
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
@@ -290,19 +293,8 @@ const [home, setHome] = useState();
 		</div>
 	</div>
 
-	<footer class="footer">
-	<div class="wrap">
-		<div class="footer__wrap">
-			<div class="footer__logo">
-				<a href="/" class="header__home">
-					<img src={logoFooter} alt=""/>
-				</a>
-			</div>
-			<div class="copyright"><span>Copyright © 2022 forwardslashny.com</span> <span class="copyright-line">|</span> <span>All Rights Reserved.</span></div>
-		</div>
-	</div>
-</footer>
-
+	
+  
 </div>
   );
 };

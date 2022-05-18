@@ -1,13 +1,15 @@
 import React from 'react'
 import './navMenu.css';
 
-const navMenu = () => ({
+const navMenu = () => {
+	
+  return ( 
 
-    render() {
-  return (
+    <div>
+  
 	  	
 		<div className="header__container">
-			<div className="header__home-logo"><a href="/" className="header__home"> <img src={"/assets/images/cart/LogoHeader.png"} alt="" className="header__logo"/> </a></div>
+			<div className="header__home-logo"><a href="/" className="header__home"> <img src="/assets/images/cart/LogoHeader.png" alt="" className="header__logo"/> </a></div>
 
 			
 				<nav className="main-nav">
@@ -34,8 +36,8 @@ const navMenu = () => ({
 					</ul>
 				</nav>
     </div>
-    );
-}
-});
+	</div>
+    )};
+
 
 export default navMenu;
