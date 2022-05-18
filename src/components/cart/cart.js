@@ -1,6 +1,13 @@
 import React from 'react'
 import './Cart.css';
 import {useState} from 'react';
+import logoWhite from '../../assets/images/logo-white.png'
+import logoHeader from '../../assets/images/LogoHeader.png'
+import bicycle from '../../assets/images/bicycle.png'
+import camera from '../../assets/images/camera.png'
+import phone from '../../assets/images/phone.png'
+import logo from '../../assets/images/logo.png'
+
 const Cart = () => {  
 	const [cart, setCart] = useState();
   return (
@@ -12,7 +19,7 @@ const Cart = () => {
 	<div class="header__overlay"></div>
 	<div class="wrap">
 		<div class="header__container">
-			<div class="logo-mobile"><a href="/" class="header__home"> <img src="/assets/images/logo-white.png" alt="" class="header__logo"/> </a></div>
+			<div class="logo-mobile"><a href="/" class="header__home"> <img src={logoHeader} alt="" class="header__logo"/> </a></div>
 
 			
 				<nav class="main-nav">
@@ -20,28 +27,28 @@ const Cart = () => {
 						
 							<li class="main-nav__list-item" role="menuitem">
 								<a href="javascript:;" class="main-nav__list-link">
-									<img src="" alt="" class="header__logo"/>
+									<img src={logoHeader} alt="" class="header__logo"/>
 									ABOUT US
 								</a>
 							</li>
 						
 							<li class="main-nav__list-item" role="menuitem">
 								<a href="javascript:;" class="main-nav__list-link">
-									<img src="" alt="" class="header__logo"/>
+									<img src={logoHeader} alt="" class="header__logo"/>
 									LOCATIONS
 								</a>
 							</li>
 						
 							<li class="main-nav__list-item main-nav__list-item--image" role="menuitem">
 								<a href="javascript:;" class="header__home-logo">
-									<img src="/assets/images/logo-white.png" alt="" class="header__logo"/>
+									<img src={logoWhite} alt="" class="header__logo"/>
 									
 								</a>
 							</li>
 						
 							<li class="main-nav__list-item" role="menuitem">
 								<a href="javascript:;" class="main-nav__list-link">
-									<img src="" alt="" class="header__logo"/>
+									<img src={logoHeader} alt="" class="header__logo"/>
 									SHOP
 								</a>
 							</li>
@@ -85,7 +92,7 @@ const Cart = () => {
 					
 						<div class="cart__item">
 							<div class="cart__item-body-image">
-								<img src="/assets/images/camera.png" alt="" class="cart__item-img"/>
+								<img src={camera} alt="" class="cart__item-img"/>
 							</div>
 							<div class="cart__item-details">
 								<span class="cart__item-name">RANGEFINDER CAMERA</span>
@@ -103,7 +110,7 @@ const Cart = () => {
 					
 						<div class="cart__item">
 							<div class="cart__item-body-image">
-								<img src="/assets/images/phone.png" alt="" class="cart__item-img"/>
+								<img src={phone} alt="" class="cart__item-img"/>
 							</div>
 							<div class="cart__item-details">
 								<span class="cart__item-name">OLD DISK ROTARY PHONE</span>
@@ -121,7 +128,7 @@ const Cart = () => {
 					
 						<div class="cart__item">
 							<div class="cart__item-body-image">
-								<img src="/assets/images/bicycle.png" alt="" class="cart__item-img"/>
+								<img src={bicycle} alt="" class="cart__item-img"/>
 							</div>
 							<div class="cart__item-details">
 								<span class="cart__item-name">RANGEFINDER CAMERA</span>
@@ -153,7 +160,7 @@ const Cart = () => {
 		<div class="footer__wrap">
 			<div class="footer__logo">
 				<a href="/" class="header__home">
-					<img src="/assets/images/logo.png" alt=""/>
+					<img src={logo} alt=""/>
 				</a>
 			</div>
 			<span class="copyright">Copyright © 2022 forwardslashny.com | All Rights Reserved.</span>
