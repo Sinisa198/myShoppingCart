@@ -50,10 +50,10 @@ const Cart = () => {
 								</a>
 							</li>
 						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" class="main-nav__list-link">
-									<img src={logoHeader} alt="" class="header__logo"/>
-									<Link to="/">SHOP</Link>
+							<li className="main-nav__list-item" role="menuitem">
+								<a href="javascript:;" className="main-nav__list-link">
+									<img src={logoHeader} alt="" className="header__logo"/>
+									<Link  className="main-nav__list-link" to="/">SHOP</Link>
 								</a>
 							</li>
 						
@@ -80,11 +80,11 @@ const Cart = () => {
 	<div class="wrap">
 		<div class="cart__container">
 			<div class="cart__top">
-				<div className="cart__top-btn">
-					<Link className="btn btn--black" to='/'>BACK TO SHOP</Link>
+				<div class="cart__top-btn">
+					<Link class="btn btn--black" to='/'>BACK TO SHOP</Link>
 				</div>
 				<div class="cart__title">
-					<Link class="pretitle" to='/'> SHOP </Link>
+					<span class="pretitle">	SHOP</span>
 					<h2 class="section-title">SAME OLD SAME OLD</h2>
 				</div>
 				<div class="cart__top-btn">
