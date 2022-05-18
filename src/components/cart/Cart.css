@@ -328,7 +328,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
   --------------------------------------------------------------*/
   @font-face {
     font-family: 'Open Sans';
-    src: url("../../../assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("../../../assets/fonts/OpenSans-Regular.woff") format("woff"), url("../../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    src: url("../../assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("../../assets/fonts/OpenSans-Regular.woff") format("woff"), url("../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -336,7 +336,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
   
   @font-face {
     font-family: 'Open Sans';
-    src: url("../../../assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("../../../assets/fonts/OpenSans-Bold.woff") format("woff"), url("../../../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    src: url("../../assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("../../assets/fonts/OpenSans-Bold.woff") format("woff"), url("../../assets/fonts/OpenSans-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -344,7 +344,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
   
   @font-face {
     font-family: 'Times New Roman';
-    src: url("../../../assets/fonts/TimesNewRomanPSMT.woff2") format("woff2"), url("../../../assets/fonts/TimesNewRomanPSMT.woff") format("woff"), url("../../../assets/fonts/TimesNewRomanPSMT.ttf") format("truetype");
+    src: url("../../assets/fonts/TimesNewRomanPSMT.woff2") format("woff2"), url("../../assets/fonts/TimesNewRomanPSMT.woff") format("woff"), url("../../assets/fonts/TimesNewRomanPSMT.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -352,7 +352,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
   
   @font-face {
     font-family: 'Times New Roman';
-    src: url("../../../assets/fonts/TimesNewRomanPSMT_1.woff2") format("woff2"), url("../../../assets/fonts/TimesNewRomanPSMT_1.woff") format("woff"), url("../../../assets/fonts/TimesNewRomanPSMT_1.ttf") format("truetype");
+    src: url("../../assets/fonts/TimesNewRomanPSMT_1.woff2") format("woff2"), url("../../assets/fonts/TimesNewRomanPSMT_1.woff") format("woff"), url("../../assets/fonts/TimesNewRomanPSMT_1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -360,7 +360,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
   
   @font-face {
     font-family: 'Times New Roman';
-    src: url("../../../assets/fonts/TimesNewRomanPSMT_2.woff2") format("woff2"), url("../../../assets/fonts/TimesNewRomanPSMT_2.woff") format("woff"), url("../../../assets/fonts/TimesNewRomanPSMT_2.ttf") format("truetype");
+    src: url("../../assets/fonts/TimesNewRomanPSMT_2.woff2") format("woff2"), url("../../assets/fonts/TimesNewRomanPSMT_2.woff") format("woff"), url("../../assets/fonts/TimesNewRomanPSMT_2.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

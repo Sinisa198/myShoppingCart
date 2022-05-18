@@ -1,8 +1,16 @@
 import { render } from '@testing-library/react'
 import React from 'react';
 import {Button, useNavigate, useState} from 'react';
-
-const HomePage = () => {
+import logoHeader from '../../assets/images/LogoHeader.png'
+import logoFooter from '../../assets/images/LogoFooter.png'
+import camera from '../../assets/images/camera.png'
+import favorite from '../../assets/images/favorite.png'
+import bicycle from '../../assets/images/bicycle.png'
+import tv from '../../assets/images/tv.png'
+import car from '../../assets/images/car.png'
+import phone from '../../assets/images/phone.png'
+import horse from '../../assets/images/horse.png'
+	const HomePage = () => {
 
 const [home, setHome] = useState();
 
@@ -14,7 +22,7 @@ const [home, setHome] = useState();
 	<div class="header__overlay"></div>
 	<div class="wrap">
 		<div class="header__container">
-			<div class="header__home-logo"><a href="/" class="header__home"> <img src="/assets/images/LogoHeader.png" alt="" class="header__logo"/> </a></div>
+			<div class="header__home-logo"><a href="/" class="header__home"> <img src={logoHeader} alt="" class="header__logo"/> </a></div>
 
 			
 				<nav class="main-nav">
@@ -71,7 +79,7 @@ const [home, setHome] = useState();
 							<div class="cards__item">
 								<div class="cards__item-body">
 									<div class="cards__item-body-image">
-										<img src="/assets/images/camera.png" alt="" class="cards__item-img"/>
+										<img src={camera} alt="" class="cards__item-img"/>
 									</div>
 									<span class="cards__item-body-name">RANGEFINDER CAMERA</span>
 									<span class="cards__item-body-price">$36.5</span>
@@ -94,8 +102,8 @@ const [home, setHome] = useState();
 									</div>
 									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
 									<div class="heart">
-										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
-										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+										<img src={favorite} alt="heart" class="heart-icon heart__full"/>
+										<img src="/assents/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
 									</div>
 								</div>
 							</div>
@@ -105,7 +113,7 @@ const [home, setHome] = useState();
 							<div class="cards__item">
 								<div class="cards__item-body">
 									<div class="cards__item-body-image">
-										<img src="/assets/images/car.png" alt="" class="cards__item-img"/>
+										<img src={car} alt="" class="cards__item-img"/>
 									</div>
 									<span class="cards__item-body-name">FORD</span>
 									<span class="cards__item-body-price">$4994</span>
@@ -128,8 +136,8 @@ const [home, setHome] = useState();
 									</div>
 									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
 									<div class="heart">
-										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
-										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
+										<img src={favorite} alt="heart" class="heart-icon heart__full"/>
+										<img src="/assents/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
 									</div>
 								</div>
 							</div>
@@ -139,7 +147,7 @@ const [home, setHome] = useState();
 							<div class="cards__item">
 								<div class="cards__item-body">
 									<div class="cards__item-body-image">
-										<img src="/assets/images/phone.png" alt="" class="cards__item-img"/>
+										<img src={phone} alt="" class="cards__item-img"/>
 									</div>
 									<span class="cards__item-body-name">OLD DISK ROTARY PHONE</span>
 									<span class="cards__item-body-price">$2</span>
@@ -162,7 +170,7 @@ const [home, setHome] = useState();
 									</div>
 									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
 									<div class="heart">
-										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src={favorite} alt="heart" class="heart-icon heart__full"/>
 										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
 									</div>
 								</div>
@@ -173,7 +181,7 @@ const [home, setHome] = useState();
 							<div class="cards__item">
 								<div class="cards__item-body">
 									<div class="cards__item-body-image">
-										<img src="/assets/images/tv.png" alt="" class="cards__item-img"/>
+										<img src={tv} alt="" class="cards__item-img"/>
 									</div>
 									<span class="cards__item-body-name">RANGEFINDER CAMERA</span>
 									<span class="cards__item-body-price">$22.3</span>
@@ -196,7 +204,7 @@ const [home, setHome] = useState();
 									</div>
 									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
 									<div class="heart">
-										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src={favorite} alt="heart" class="heart-icon heart__full"/>
 										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
 									</div>
 								</div>
@@ -207,7 +215,7 @@ const [home, setHome] = useState();
 							<div class="cards__item">
 								<div class="cards__item-body">
 									<div class="cards__item-body-image">
-										<img src="/assets/images/horse.png" alt="" class="cards__item-img"/>
+										<img src={horse} alt="" class="cards__item-img"/>
 									</div>
 									<span class="cards__item-body-name">ROCKING HORSE</span>
 									<span class="cards__item-body-price">$4994</span>
@@ -230,7 +238,7 @@ const [home, setHome] = useState();
 									</div>
 									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
 									<div class="heart">
-										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src={favorite} alt="heart" class="heart-icon heart__full"/>
 										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
 									</div>
 								</div>
@@ -241,7 +249,7 @@ const [home, setHome] = useState();
 							<div class="cards__item">
 								<div class="cards__item-body">
 									<div class="cards__item-body-image">
-										<img src="/assets/images/bicycle.png" alt="" class="cards__item-img"/>
+										<img src={bicycle} alt="" class="cards__item-img"/>
 									</div>
 									<span class="cards__item-body-name">BICYCLE</span>
 									<span class="cards__item-body-price">$10.9</span>
@@ -264,7 +272,7 @@ const [home, setHome] = useState();
 									</div>
 									<a class="add-to-cart btn" href="javascript:;">ADD TO CART</a>
 									<div class="heart">
-										<img src="/assets/images/favorite.png" alt="heart" class="heart-icon heart__full"/>
+										<img src={favorite} alt="heart" class="heart-icon heart__full"/>
 										<img src="/assets/images/favorite-border.png" alt="heart" class="heart-icon heart__empty"/>
 									</div>
 								</div>
@@ -287,7 +295,7 @@ const [home, setHome] = useState();
 		<div class="footer__wrap">
 			<div class="footer__logo">
 				<a href="/" class="header__home">
-					<img src="/assets/images/LogoFooter.png" alt=""/>
+					<img src={logoFooter} alt=""/>
 				</a>
 			</div>
 			<div class="copyright"><span>Copyright © 2022 forwardslashny.com</span> <span class="copyright-line">|</span> <span>All Rights Reserved.</span></div>

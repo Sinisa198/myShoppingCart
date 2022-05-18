@@ -6,7 +6,6 @@ import HomePage  from './components/Home/HomePage';
 function App() {
   return (
     <div>
-      <navMenu />
       <HomePage />
     </div>
   );
