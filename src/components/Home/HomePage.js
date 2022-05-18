@@ -1,30 +1,50 @@
 import { render } from '@testing-library/react'
 import React from 'react';
-import {Button} from 'react';
-import {useNavigate} from 'react';
-
+import {Button, useNavigate, useState} from 'react';
 
 const HomePage = () => {
 
-
+const [home, setHome] = useState();
 
   return (
 	  
     <div id="page" class="site">
-		<navMenu />
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header class="header js-site-header">
 	<div class="header__overlay"></div>
 	<div class="wrap">
 		<div class="header__container">
-			<div class="header__home-logo"><a href="/" class="header__home"> <img src={'./components/phone.png'} alt="" class="header__logo"/> </a></div>
+			<div class="header__home-logo"><a href="/" class="header__home"> <img src="/assets/images/LogoHeader.png" alt="" class="header__logo"/> </a></div>
+
 			
-				
+				<nav class="main-nav">
+					<ul class="main-nav__list" role="menubar">
+						
+							<li class="main-nav__list-item" role="menuitem">
+								<a href="javascript:;" class="main-nav__list-link">
+									ABOUT US
+								</a>
+							</li>
+						
+							<li class="main-nav__list-item" role="menuitem">
+								<a href="javascript:;" class="main-nav__list-link">
+									LOCATIONS
+								</a>
+							</li>
+						
+							<li class="main-nav__list-item" role="menuitem">
+								<a href="" class="main-nav__list-link">
+									SHOP
+								</a>
+							</li>
+						
+					</ul>
+				</nav>
 				<div class="main-nav-cart">
-					<a  href="" class="main-nav-cart-link" >
+					<a href="" class="main-nav-cart-link">
 						cart
 					</a>
-					<span class="main-nav-cart-qty">7</span>
+					<span class="main-nav-cart-qty">3</span>
 				</div>
 			
 			<a href="javascript:" class="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -41,6 +61,7 @@ const HomePage = () => {
 	<div class="cards">
 	<div class="wrap">
 		<div class="cards__container">
+			<span class="pretitle">SHOP</span>
 			<h2 class="section-title">SAME OLD SAME OLD</h2>
 
 			
@@ -159,7 +180,7 @@ const HomePage = () => {
 								</div>
 								<div class="cards__item-footer">
 									<div class="quantity">
-										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<input class="qty" type="number" step="1" min="1" value="0" />
 										<div class="quantity__button">
 											<button class="quantity-add js-inc quantity-button">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -193,7 +214,7 @@ const HomePage = () => {
 								</div>
 								<div class="cards__item-footer">
 									<div class="quantity">
-										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<input class="qty" type="number" step="1" min="1" value="0" />
 										<div class="quantity__button">
 											<button class="quantity-add js-inc quantity-button">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -227,7 +248,7 @@ const HomePage = () => {
 								</div>
 								<div class="cards__item-footer">
 									<div class="quantity">
-										<input class="qty" type="number" step="1" min="1" value="0"/>
+										<input class="qty" type="number" step="1" min="1" value="0" />
 										<div class="quantity__button">
 											<button class="quantity-add js-inc quantity-button">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

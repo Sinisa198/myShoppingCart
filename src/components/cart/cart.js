@@ -1,8 +1,10 @@
 import React from 'react'
 import './Cart.css';
+import {useState} from 'react';
 const Cart = () => {  
-
+	const [cart, setCart] = useState();
   return (
+
 	  <div>
 	<div id="page" class="site">
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
