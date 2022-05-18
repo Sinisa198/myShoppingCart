@@ -1,13 +1,14 @@
 import React from 'react'
-import './navMenu.css';
+import './navBar.css';
+import useState from 'react';
 
-const navMenu = () => {
+const navBar = () => {
 	
   return ( 
 
     <div>
   
-	  	
+	  	{console.log('hello')}
 		<div className="header__container">
 			<div className="header__home-logo"><a href="/" className="header__home"> <img src="/assets/images/cart/LogoHeader.png" alt="" className="header__logo"/> </a></div>
 
@@ -40,4 +41,4 @@ const navMenu = () => {
     )};
 
 
-export default navMenu;
+export default navBar;

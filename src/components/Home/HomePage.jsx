@@ -10,8 +10,10 @@ import car from '../../assets/images/car.png'
 import phone from '../../assets/images/phone.png'
 import horse from '../../assets/images/horse.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
+import {Link} from 'react-router-dom'
 
 	export const HomePage = () => {
+		
 
 		const [home, setHome] = useState(0);
 		const handleDecremente = () =>{
@@ -56,9 +58,8 @@ import favoriteBorder from '../../assets/images/favorite-border.png'
 					</ul>
 				</nav>
 				<div className="main-nav-cart">
-					<a href="" className="main-nav-cart-link"  >
-						Cart
-					</a>
+					
+						<Link  className="main-nav-cart-link" to="/cartItem">Cart</Link>
 					<span className="main-nav-cart-qty">{home}</span>
 				</div>
 			

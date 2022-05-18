@@ -6,11 +6,15 @@ import bicycle from '../../assets/images/bicycle.png'
 import camera from '../../assets/images/camera.png'
 import phone from '../../assets/images/phone.png'
 import logo from '../../assets/images/logo.png'
+import {Link} from 'react-router-dom';
+import HomePage from '../Home/HomePage';
 
 const Cart = () => {  
-	
+	const handleClick = () =>{
+		console.log('helldsadasdo')
+	}
   return (
-
+	
 	  <div>
 		  {console.log('hello')}
 	<div id="page" class="site">
@@ -49,7 +53,7 @@ const Cart = () => {
 							<li class="main-nav__list-item" role="menuitem">
 								<a href="javascript:;" class="main-nav__list-link">
 									<img src={logoHeader} alt="" class="header__logo"/>
-									SHOP
+									<Link to="/">SHOP</Link>
 								</a>
 							</li>
 						
@@ -57,7 +61,7 @@ const Cart = () => {
 				</nav>
 				<div class="main-nav-cart">
 					<a href="javascript:;" class="main-nav-cart-link">
-						cart
+						Cart
 					</a>
 					<span class="main-nav-cart-qty">3</span>
 				</div>
@@ -76,11 +80,11 @@ const Cart = () => {
 	<div class="wrap">
 		<div class="cart__container">
 			<div class="cart__top">
-				<div class="cart__top-btn">
-					<a class="btn btn--black" href="javascript:;">BACK TO SHOP</a>
+				<div className="cart__top-btn">
+					<Link className="btn btn--black" to='/'>BACK TO SHOP</Link>
 				</div>
 				<div class="cart__title">
-					<span class="pretitle">SHOP</span>
+					<Link class="pretitle" to='/'> SHOP </Link>
 					<h2 class="section-title">SAME OLD SAME OLD</h2>
 				</div>
 				<div class="cart__top-btn">
