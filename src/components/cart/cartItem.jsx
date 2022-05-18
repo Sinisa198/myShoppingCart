@@ -1,6 +1,5 @@
 import React from 'react'
-import './Cart.css';
-import {useState} from 'react';
+import './cartItem.css';
 import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
 import bicycle from '../../assets/images/bicycle.png'
@@ -9,10 +8,11 @@ import phone from '../../assets/images/phone.png'
 import logo from '../../assets/images/logo.png'
 
 const Cart = () => {  
-	const [cart, setCart] = useState();
+	
   return (
 
 	  <div>
+		  {console.log('hello')}
 	<div id="page" class="site">
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header class="header js-site-header">
@@ -21,7 +21,7 @@ const Cart = () => {
 		<div class="header__container">
 			<div class="logo-mobile"><a href="/" class="header__home"> <img src={logoHeader} alt="" class="header__logo"/> </a></div>
 
-			
+				
 				<nav class="main-nav">
 					<ul class="main-nav__list" role="menubar">
 						
@@ -155,20 +155,9 @@ const Cart = () => {
 		</div>
 	</div>
 
-	<footer class="footer">
-	<div class="wrap">
-		<div class="footer__wrap">
-			<div class="footer__logo">
-				<a href="/" class="header__home">
-					<img src={logo} alt=""/>
-				</a>
-			</div>
-			<span class="copyright">Copyright © 2022 forwardslashny.com | All Rights Reserved.</span>
-		</div>
-	</div>
-</footer>
+	
 </div>
 </div>
-)};
+)}
 
 export default Cart

@@ -11,14 +11,9 @@ import phone from '../../assets/images/phone.png'
 import horse from '../../assets/images/horse.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
 
-
 	export const HomePage = () => {
-		const [home, setHome] = useState(0);
 
-		const handleClick = () => {
-			console.log('hello');
-			
-		}
+		const [home, setHome] = useState(0);
 		const handleDecremente = () =>{
 			setHome(prevCount => prevCount - 1 )
 		}
@@ -26,17 +21,15 @@ import favoriteBorder from '../../assets/images/favorite-border.png'
 			setHome(prevCount => prevCount + 1)
 		}
 		
-	  
-
-
  	 return (
+
     <div id="page" class="site">
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header className="header js-site-header">
 	<div className="header__overlay"></div>
 	<div className="wrap">
 		<div className="header__container">
-			<div className="header__home-logo"><a href="/" class="header__home"> <img src={logoHeader} alt="" className="header__logo"/> </a></div>
+			<div className="header__home-logo"><a href="/" className ="header__home"> <img src={logoHeader} alt="" className="header__logo"/> </a></div>
 
 			
 				<nav className="main-nav">
@@ -63,10 +56,10 @@ import favoriteBorder from '../../assets/images/favorite-border.png'
 					</ul>
 				</nav>
 				<div className="main-nav-cart">
-					<a href="" className="main-nav-cart-link" onClick={() => handleClick} >
+					<a href="" className="main-nav-cart-link"  >
 						Cart
 					</a>
-					<span className="main-nav-cart-qty">2</span>
+					<span className="main-nav-cart-qty">{home}</span>
 				</div>
 			
 			<a href="javascript:" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -191,7 +184,7 @@ import favoriteBorder from '../../assets/images/favorite-border.png'
 								</div>
 							</div>
 						</div>
-					
+						{console.log('hello')}
 						<div className="col-xl-4 col-lg-4 col-md-6">
 							<div className="cards__item">
 								<div className="cards__item-body">
@@ -302,8 +295,11 @@ import favoriteBorder from '../../assets/images/favorite-border.png'
 			</main>
 		</div>
 	</div>
-
+	<div>
+      
+    </div>
 </div>
+
   );
 };
 export default HomePage;
