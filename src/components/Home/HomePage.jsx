@@ -9,53 +9,48 @@ import phone from '../../assets/images/phone.png'
 import horse from '../../assets/images/horse.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
 import {Link} from 'react-router-dom'
-import Ford from '../Ford'
-import Camera from '../Camera'
-import Horse from '../Horse'
-import Phone from '../Phone'
-import Tv from '../Tv'
-import Bicycle from '../Bicycle';
 import ProductItem from './ProductItem';
 
 	export const HomePage = (props) => {
 		
   
-	const	prod= [{
+	const prod = [{
 			id: '1',
-			name: 'Tv',
-			price: '350$',
+			name: 'ROCKING HORSE',
+			price: '$4994',
 			image: '../../assets/images/horse.png'
 		},
 		  {
 			id: '2',
-			name: 'Bed',
-			price: '120$',
+			name: 'OLD DISK ROTARY PHONE',
+			price: '$2',
 			image : '../../assets/images/phone.png'
 		  },
 		  {
 			id: '3',
-			name: 'Computer',
-			price: '510$'
+			name: 'FORD',
+			price: '$4994',
+			image :  '../../assets/images/ford.png'
 		  },
 		  {
 			id: '4',
-			name:'Glass',
-			price: '12$'
+			name:'BICYCLE',
+			price: '$10.9'
 		  },
 		  {
 			id : '5',
-			name : 'Snack',
-			price : '22$'
+			name : 'TV',
+			price : '$22.3',
+			image :  '../../assets/images/ford.png'
+		  },
+		  {
+			  id: '6',
+			  name: 'RANGEFINDER CAMERA',
+			  price: '$36.5',
+			  image : '../../assets/images/ford.png'
 		  }
 		 ]
-			// export const HomePage  = (props) => {
-   			  // return (
-      		 // <ul>
-         // props.cartItem.map(item => <li> <a href={{item.link}}> {{item.name}} </a> </li>);
-        //</ul>
-      //)
-   // }
-	
+		
  	 return (
 		  
 		  
@@ -115,7 +110,7 @@ import ProductItem from './ProductItem';
 
 			
 				<div className="row cards__wrapper">
-				{prod.map(item => (<ProductItem name={item.name} id={item.id} price={item.price} image={item.image} />))}
+				{prod.map(item => (<ProductItem key = {item.id} name={item.name} id={item.id} price={item.price} image={item.image} />))}
 				
 			
 			</div>

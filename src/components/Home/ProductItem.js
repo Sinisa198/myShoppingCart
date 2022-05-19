@@ -1,7 +1,8 @@
 import React from 'react'
 import {useState} from 'react'
 import horse from '../../assets/images/horse.png' 
-function ProductItem({name,id,price,image}) {
+
+ const ProductItem = ({name,id,price,image}) => {
   
     const [horses, setHorse] = useState(0);
 		const handleDecremente = () =>{
@@ -15,7 +16,7 @@ function ProductItem({name,id,price,image}) {
 							<div className="cards__item">
 								<div className="cards__item-body">
 									<div className="cards__item-body-image">
-										<img src={horse} alt="" className="cards__item-img"/>
+										<img src={image} alt="" className="cards__item-img"/>
 									</div>
 									<span className="cards__item-body-name">{name}</span>
 									<span className="cards__item-body-price">{price}</span>
