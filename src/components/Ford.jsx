@@ -1,5 +1,5 @@
 import React from 'react'
-import useState from 'react'
+import {useState} from 'react'
 import car from '../assets/images/car.png'
 import favorite from '../assets/images/favorite.png'
 import favoriteBorder from '../assets/images/favorite-border.png'
@@ -38,7 +38,7 @@ export const Ford = () => {
 											</button>
 										</div>
 									</div>
-									<a className="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<a className="add-to-cart btn" href="">ADD TO CART</a>
 									<div className="heart">
 										<img src={favorite} alt="heart" className="heart-icon heart__full"/>
 										<img src={favoriteBorder} alt="heart" className="heart-icon heart__empty"/>

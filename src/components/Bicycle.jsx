@@ -1,8 +1,17 @@
 import React from 'react'
-import useState from 'react'
+import {useState} from 'react'
+import favoriteBorder from '../assets/images/favorite-border.png'
+import favorite from '../assets/images/favorite.png'
+import bicycle from '../assets/images/bicycle.png'
 
 export const  Bicycle = () => {
-    const[bicycle, setBicycle] = useState(0);
+    const[bicycles, setBicycle] = useState(0);
+	const handleDecremente = () =>{
+		setBicycle(prevCount => prevCount - 1 )
+	}
+	const handleIncremente = () =>{
+		setBicycle(prevCount => prevCount + 1)
+	}
   return (
     <div>
       	<div className="col-xl-4 col-lg-4 col-md-6">
@@ -16,7 +25,7 @@ export const  Bicycle = () => {
 								</div>
 								<div className="cards__item-footer">
 									<div className="quantity">
-										<input className="qty" type="number" step="1" min="1" value={home} />
+										<input className="qty" type="number" step="1" min="1" value={bicycles} />
 										<div className="quantity__button">
 											<button className="quantity-add js-inc quantity-button" onClick={handleIncremente}>
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -30,7 +39,7 @@ export const  Bicycle = () => {
 											</button>
 										</div>
 									</div>
-									<a className="add-to-cart btn" href="javascript:;">ADD TO CART</a>
+									<a className="add-to-cart btn" href="">ADD TO CART</a>
 									<div className="heart">
 										<img src={favorite} alt="heart" className="heart-icon heart__full"/>
 										<img src={favoriteBorder} alt="heart" className="heart-icon heart__empty"/>

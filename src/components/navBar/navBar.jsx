@@ -17,13 +17,13 @@ const navBar = () => {
 					<ul className="main-nav__list" role="menubar">
 						
 							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
+								<a href="" className="main-nav__list-link">
 									ABOUT US
 								</a>
 							</li>
 						
 							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
+								<a href="" className="main-nav__list-link">
 									LOCATIONS
 								</a>
 							</li>

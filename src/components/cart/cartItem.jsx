@@ -32,28 +32,28 @@ const Cart = () => {
 					<ul className="main-nav__list" role="menubar">
 						
 							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
+								<a href="" className="main-nav__list-link">
 									<img src={logoHeader} alt="" className="header__logo"/>
 									ABOUT US
 								</a>
 							</li>
 						
 							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
+								<a href="" className="main-nav__list-link">
 									<img src={logoHeader} alt="" className="header__logo"/>
 									LOCATIONS
 								</a>
 							</li>
 						
 							<li className="main-nav__list-item main-nav__list-item--image" role="menuitem">
-								<a href="javascript:;" className="header__home-logo">
+								<a href="" className="header__home-logo">
 									<img src={logoWhite} alt="" className="header__logo"/>
 									
 								</a>
 							</li>
 						
 							<li className="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" className="main-nav__list-link">
+								<a href="" className="main-nav__list-link">
 									<img src={logoHeader} alt="" className="header__logo"/>
 									<Link  className="main-nav__list-link" to="/">SHOP</Link>
 								</a>
@@ -62,13 +62,13 @@ const Cart = () => {
 					</ul>
 				</nav>
 				<div className="main-nav-cart">
-					<a href="javascript:;" className="main-nav-cart-link">
+					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
 					<span className="main-nav-cart-qty">3</span>
 				</div>
 			
-			<a href="javascript:" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
+			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
 		</div>
 	</div>
 </header>
@@ -90,7 +90,7 @@ const Cart = () => {
 					<h2 className="section-title">SAME OLD SAME OLD</h2>
 				</div>
 				<div className="cart__top-btn">
-					<a className="btn btn--black" href="javascript:;">CHECKOUT</a>
+					<a className="btn btn--black" href="">CHECKOUT</a>
 				</div>
 			</div>
 			
@@ -107,7 +107,7 @@ const Cart = () => {
 								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href="javascript:;" onClick ={removeItem}>REMOVE FROM CART</a>
+								<a className="btn btn--sm" href="" onClick ={removeItem}>REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">PRICE: <span>$36.5</span></span>
@@ -125,7 +125,7 @@ const Cart = () => {
 								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href="javascript:;" onClick ={removeItem}>REMOVE FROM CART</a>
+								<a className="btn btn--sm" href="" onClick ={removeItem}>REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">PRICE: <span>$2</span></span>
@@ -143,7 +143,7 @@ const Cart = () => {
 								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href="javascript:;" onClick ={removeItem} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href="" onClick ={removeItem} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">PRICE: <span>$10</span></span>
