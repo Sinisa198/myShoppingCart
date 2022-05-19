@@ -8,8 +8,36 @@ import phone from '../../assets/images/phone.png'
 import logo from '../../assets/images/logo.png'
 import {Link} from 'react-router-dom';
 import HomePage from '../Home/HomePage';
+import ProductItem  from '../Home/ProductItem';
+import addCart from './addCart';
+import { useContext } from 'react';
 
-const Cart = () => {  
+
+	const Cart = (name, price) => {  
+		const [items] = useContext(addCart)
+	const prod = [{
+		id: '1',
+		name: 'ROCKING HORSE',
+		price: '$4994',
+	},
+	  {
+		id: '2',
+		name: 'OLD DISK ROTARY PHONE',
+		price: '$2',
+	  },
+	  {
+		id: '3',
+		name: 'FORD',
+		price: '$4994',
+	  },
+	  {
+		id: '4',
+		name:'BICYCLE',
+		price: '$10.9',
+	  }]
+
+
+
 	const handleClick = () =>{
 	console.log('helldsadasdo')
 	}
@@ -65,7 +93,7 @@ const Cart = () => {
 					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span className="main-nav-cart-qty">3</span>
+					<span className="main-nav-cart-qty">25</span>
 				</div>
 			
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -96,41 +124,7 @@ const Cart = () => {
 			
 				<div className="row cart__wrapper">
 					
-						<div className="cart__item">
-							<div className="cart__item-body-image">
-								<img src={camera} alt="" className="cart__item-img"/>
-							</div>
-							<div className="cart__item-details">
-								<span className="cart__item-name">RANGEFINDER CAMERA</span>
-								<span className="cart__item-info">BRAND: ZENIT</span>
-								<span className="cart__item-info">YEAR OF MANUFACTURE: 1987</span>
-								<span className="cart__item-info">AMOUNT: 1</span>
-							</div>
-							<div className="cart__item-button">
-								<a className="btn btn--sm" href="" onClick ={removeItem}>REMOVE FROM CART</a>
-							</div>
-							<div className="cart__item-price">
-								<span className="cards__price">PRICE: <span>$36.5</span></span>
-							</div>
-						</div>
-					
-						<div className="cart__item">
-							<div className="cart__item-body-image">
-								<img src={phone} alt="" className="cart__item-img"/>
-							</div>
-							<div className="cart__item-details">
-								<span className="cart__item-name">OLD DISK ROTARY PHONE</span>
-								<span className="cart__item-info">BRAND: Stella</span>
-								<span className="cart__item-info">YEAR OF MANUFACTURE: 1995</span>
-								<span className="cart__item-info">AMOUNT: 1</span>
-							</div>
-							<div className="cart__item-button">
-								<a className="btn btn--sm" href="" onClick ={removeItem}>REMOVE FROM CART</a>
-							</div>
-							<div className="cart__item-price">
-								<span className="cards__price">PRICE: <span>$2</span></span>
-							</div>
-						</div>
+				
 					
 						<div className="cart__item">
 							<div className="cart__item-body-image">
@@ -146,7 +140,7 @@ const Cart = () => {
 								<a className="btn btn--sm" href="" onClick ={removeItem} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
-								<span className="cards__price">PRICE: <span>$10</span></span>
+								<span className="cards__price">PRICE: <span></span></span>
 							</div>
 						</div>
 					

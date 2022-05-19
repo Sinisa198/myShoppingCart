@@ -12,8 +12,7 @@ import phone from '../../assets/images/phone.png'
 
 	export const HomePage = () => {
 		
-  
-	const components = [{
+	const products = [{
 			id: '1',
 			name: 'ROCKING HORSE',
 			price: '$4994',
@@ -110,7 +109,7 @@ import phone from '../../assets/images/phone.png'
 
 			
 				<div className="row cards__wrapper">
-				{components.map(item => 
+				{products.map(item => 
 					<ProductItem key = {item.id} name={item.name} id={item.id} price={item.price}
 					 image={item.image} />)}
 				
