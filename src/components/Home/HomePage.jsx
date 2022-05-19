@@ -1,53 +1,53 @@
 import React from 'react';
-import { useState} from 'react';
 import logoHeader from '../../assets/images/LogoHeader.png'
-import favorite from '../../assets/images/favorite.png'
-import bicycle from '../../assets/images/bicycle.png'
-import tv from '../../assets/images/tv.png'
 import logoFooter from '../../assets/images/LogoFooter.png'
-import phone from '../../assets/images/phone.png'
-import horse from '../../assets/images/horse.png'
-import favoriteBorder from '../../assets/images/favorite-border.png'
 import {Link} from 'react-router-dom'
 import ProductItem from './ProductItem';
+import horse from '../../assets/images/horse.png'
+import tv from '../../assets/images/tv.png'
+import camera from '../../assets/images/camera.png'
+import bicycle from '../../assets/images/bicycle.png'
+import car from '../../assets/images/car.png'
+import phone from '../../assets/images/phone.png'
 
-	export const HomePage = (props) => {
+	export const HomePage = () => {
 		
   
-	const prod = [{
+	const components = [{
 			id: '1',
 			name: 'ROCKING HORSE',
 			price: '$4994',
-			image: '../../assets/images/horse.png'
+			image: horse
 		},
 		  {
 			id: '2',
 			name: 'OLD DISK ROTARY PHONE',
 			price: '$2',
-			image : '../../assets/images/phone.png'
+			image: phone
 		  },
 		  {
 			id: '3',
 			name: 'FORD',
 			price: '$4994',
-			image :  '../../assets/images/ford.png'
+			image :  car
 		  },
 		  {
 			id: '4',
 			name:'BICYCLE',
-			price: '$10.9'
+			price: '$10.9',
+			image :  bicycle
 		  },
 		  {
 			id : '5',
 			name : 'TV',
 			price : '$22.3',
-			image :  '../../assets/images/ford.png'
+			image :  tv
 		  },
 		  {
 			  id: '6',
 			  name: 'RANGEFINDER CAMERA',
 			  price: '$36.5',
-			  image : '../../assets/images/ford.png'
+			  image : camera
 		  }
 		 ]
 		
@@ -110,7 +110,9 @@ import ProductItem from './ProductItem';
 
 			
 				<div className="row cards__wrapper">
-				{prod.map(item => (<ProductItem key = {item.id} name={item.name} id={item.id} price={item.price} image={item.image} />))}
+				{components.map(item => 
+					<ProductItem key = {item.id} name={item.name} id={item.id} price={item.price}
+					 image={item.image} />)}
 				
 			
 			</div>

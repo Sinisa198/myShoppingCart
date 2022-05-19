@@ -1,29 +1,30 @@
 import React from 'react'
 import {useState} from 'react'
-import horse from '../../assets/images/horse.png' 
+import favorite from '../../assets/images/favorite.png'
+import favoriteBorder from '../../assets/images/favorite-border.png'
 
- const ProductItem = ({name,id,price,image}) => {
+ const ProductItem = ({name,price,image }) => {
   
-    const [horses, setHorse] = useState(0);
+    const [product, setProducts] = useState(0);
 		const handleDecremente = () =>{
-			setHorse(prevCount => prevCount - 1 )
+			setProducts(prevCount => prevCount - 1 )
 		}
 		const handleIncremente = () =>{
-			setHorse(prevCount => prevCount + 1)
+			setProducts(prevCount => prevCount + 1)
 		}
   return (
     <div className="col-xl-4 col-lg-4 col-md-6">
 							<div className="cards__item">
 								<div className="cards__item-body">
 									<div className="cards__item-body-image">
-										<img src={image} alt="" className="cards__item-img"/>
+										<img src={image} alt="slika" className="cards__item-img"/>
 									</div>
 									<span className="cards__item-body-name">{name}</span>
 									<span className="cards__item-body-price">{price}</span>
 								</div>
 								<div className="cards__item-footer">
 									<div className="quantity">
-										<input className="qty" type="number" step="1" min="1" value={horses} />
+										<input className="qty" type="number" step="1" min="1" value={product} />
 										<div className="quantity__button">
 											<button className="quantity-add js-inc quantity-button" onClick={handleIncremente}>
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -39,8 +40,8 @@ import horse from '../../assets/images/horse.png'
 									</div>
 									<a className="add-to-cart btn" href="">ADD TO CART</a>
 									<div className="heart">
-										<img src="" alt="heart" className="heart-icon heart__full"/>
-										<img src="" alt="heart" className="heart-icon heart__empty"/>
+										<img src={favorite} alt="heart" className="heart-icon heart__full"/>
+										<img src={favoriteBorder} alt="heart" className="heart-icon heart__empty"/>
 									</div>
 								</div>
 							</div>
