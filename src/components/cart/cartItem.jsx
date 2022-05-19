@@ -11,41 +11,43 @@ import HomePage from '../Home/HomePage';
 
 const Cart = () => {  
 	const handleClick = () =>{
-		console.log('helldsadasdo')
+	console.log('helldsadasdo')
+	}
+	const removeItem = (id) => {
+		console.log('agfadgaga')
 	}
   return (
 	
 	  <div>
-		  {console.log('hello')}
-	<div id="page" class="site">
+	<div id="page" className="site">
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
-	<header class="header js-site-header">
-	<div class="header__overlay"></div>
-	<div class="wrap">
-		<div class="header__container">
-			<div class="logo-mobile"><a href="/" class="header__home"> <img src={logoHeader} alt="" class="header__logo"/> </a></div>
+	<header className="header js-site-header">
+	<div className="header__overlay"></div>
+	<div className="wrap">
+		<div className="header__container">
+			<div className="logo-mobile"><a href="/" className="header__home"> <img src={logoHeader} alt="" className="header__logo"/> </a></div>
 
 				
-				<nav class="main-nav">
-					<ul class="main-nav__list" role="menubar">
+				<nav className="main-nav">
+					<ul className="main-nav__list" role="menubar">
 						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" class="main-nav__list-link">
-									<img src={logoHeader} alt="" class="header__logo"/>
+							<li className="main-nav__list-item" role="menuitem">
+								<a href="javascript:;" className="main-nav__list-link">
+									<img src={logoHeader} alt="" className="header__logo"/>
 									ABOUT US
 								</a>
 							</li>
 						
-							<li class="main-nav__list-item" role="menuitem">
-								<a href="javascript:;" class="main-nav__list-link">
-									<img src={logoHeader} alt="" class="header__logo"/>
+							<li className="main-nav__list-item" role="menuitem">
+								<a href="javascript:;" className="main-nav__list-link">
+									<img src={logoHeader} alt="" className="header__logo"/>
 									LOCATIONS
 								</a>
 							</li>
 						
-							<li class="main-nav__list-item main-nav__list-item--image" role="menuitem">
-								<a href="javascript:;" class="header__home-logo">
-									<img src={logoWhite} alt="" class="header__logo"/>
+							<li className="main-nav__list-item main-nav__list-item--image" role="menuitem">
+								<a href="javascript:;" className="header__home-logo">
+									<img src={logoWhite} alt="" className="header__logo"/>
 									
 								</a>
 							</li>
@@ -59,92 +61,92 @@ const Cart = () => {
 						
 					</ul>
 				</nav>
-				<div class="main-nav-cart">
-					<a href="javascript:;" class="main-nav-cart-link">
+				<div className="main-nav-cart">
+					<a href="javascript:;" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span class="main-nav-cart-qty">3</span>
+					<span className="main-nav-cart-qty">3</span>
 				</div>
 			
-			<a href="javascript:" class="site-header__hamburger hamburger js-menu-btn"><span></span></a>
+			<a href="javascript:" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
 		</div>
 	</div>
 </header>
 
 
-	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
+	<div id="content" className="site-content">
+		<div id="primary" className="content-area">
+			<main id="main" className="site-main">
 				
-	<div class="cart">
-	<div class="wrap">
-		<div class="cart__container">
-			<div class="cart__top">
-				<div class="cart__top-btn">
-					<Link class="btn btn--black" to='/'>BACK TO SHOP</Link>
+	<div className="cart">
+	<div className="wrap">
+		<div className="cart__container">
+			<div className="cart__top">
+				<div className="cart__top-btn">
+					<Link className="btn btn--black" to='/'>BACK TO SHOP</Link>
 				</div>
-				<div class="cart__title">
-					<span class="pretitle">	SHOP</span>
-					<h2 class="section-title">SAME OLD SAME OLD</h2>
+				<div className="cart__title">
+					<span className="pretitle">	SHOP</span>
+					<h2 className="section-title">SAME OLD SAME OLD</h2>
 				</div>
-				<div class="cart__top-btn">
-					<a class="btn btn--black" href="javascript:;">CHECKOUT</a>
+				<div className="cart__top-btn">
+					<a className="btn btn--black" href="javascript:;">CHECKOUT</a>
 				</div>
 			</div>
 			
-				<div class="row cart__wrapper">
+				<div className="row cart__wrapper">
 					
-						<div class="cart__item">
-							<div class="cart__item-body-image">
-								<img src={camera} alt="" class="cart__item-img"/>
+						<div className="cart__item">
+							<div className="cart__item-body-image">
+								<img src={camera} alt="" className="cart__item-img"/>
 							</div>
-							<div class="cart__item-details">
-								<span class="cart__item-name">RANGEFINDER CAMERA</span>
-								<span class="cart__item-info">BRAND: ZENIT</span>
-								<span class="cart__item-info">YEAR OF MANUFACTURE: 1987</span>
-								<span class="cart__item-info">AMOUNT: 1</span>
+							<div className="cart__item-details">
+								<span className="cart__item-name">RANGEFINDER CAMERA</span>
+								<span className="cart__item-info">BRAND: ZENIT</span>
+								<span className="cart__item-info">YEAR OF MANUFACTURE: 1987</span>
+								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
-							<div class="cart__item-button">
-								<a class="btn btn--sm" href="javascript:;">REMOVE FROM CART</a>
+							<div className="cart__item-button">
+								<a className="btn btn--sm" href="javascript:;" onClick ={removeItem}>REMOVE FROM CART</a>
 							</div>
-							<div class="cart__item-price">
-								<span class="cards__price">PRICE: <span>$36.5</span></span>
+							<div className="cart__item-price">
+								<span className="cards__price">PRICE: <span>$36.5</span></span>
 							</div>
 						</div>
 					
-						<div class="cart__item">
-							<div class="cart__item-body-image">
-								<img src={phone} alt="" class="cart__item-img"/>
+						<div className="cart__item">
+							<div className="cart__item-body-image">
+								<img src={phone} alt="" className="cart__item-img"/>
 							</div>
-							<div class="cart__item-details">
-								<span class="cart__item-name">OLD DISK ROTARY PHONE</span>
-								<span class="cart__item-info">BRAND: Stella</span>
-								<span class="cart__item-info">YEAR OF MANUFACTURE: 1995</span>
-								<span class="cart__item-info">AMOUNT: 1</span>
+							<div className="cart__item-details">
+								<span className="cart__item-name">OLD DISK ROTARY PHONE</span>
+								<span className="cart__item-info">BRAND: Stella</span>
+								<span className="cart__item-info">YEAR OF MANUFACTURE: 1995</span>
+								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
-							<div class="cart__item-button">
-								<a class="btn btn--sm" href="javascript:;">REMOVE FROM CART</a>
+							<div className="cart__item-button">
+								<a className="btn btn--sm" href="javascript:;" onClick ={removeItem}>REMOVE FROM CART</a>
 							</div>
-							<div class="cart__item-price">
-								<span class="cards__price">PRICE: <span>$2</span></span>
+							<div className="cart__item-price">
+								<span className="cards__price">PRICE: <span>$2</span></span>
 							</div>
 						</div>
 					
-						<div class="cart__item">
-							<div class="cart__item-body-image">
-								<img src={bicycle} alt="" class="cart__item-img"/>
+						<div className="cart__item">
+							<div className="cart__item-body-image">
+								<img src={bicycle} alt="" className="cart__item-img"/>
 							</div>
-							<div class="cart__item-details">
-								<span class="cart__item-name">RANGEFINDER CAMERA</span>
-								<span class="cart__item-info">BRAND: CLAUDE BUTLER</span>
-								<span class="cart__item-info">YEAR OF MANUFACTURE: 1997</span>
-								<span class="cart__item-info">AMOUNT: 1</span>
+							<div className="cart__item-details">
+								<span className="cart__item-name">RANGEFINDER CAMERA</span>
+								<span className="cart__item-info">BRAND: CLAUDE BUTLER</span>
+								<span className="cart__item-info">YEAR OF MANUFACTURE: 1997</span>
+								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
-							<div class="cart__item-button">
-								<a class="btn btn--sm" href="javascript:;">REMOVE FROM CART</a>
+							<div className="cart__item-button">
+								<a className="btn btn--sm" href="javascript:;" onClick ={removeItem} >REMOVE FROM CART</a>
 							</div>
-							<div class="cart__item-price">
-								<span class="cards__price">PRICE: <span>$10</span></span>
+							<div className="cart__item-price">
+								<span className="cards__price">PRICE: <span>$10</span></span>
 							</div>
 						</div>
 					
