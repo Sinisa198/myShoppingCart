@@ -5,21 +5,32 @@ import logoHeader from '../../assets/images/LogoHeader.png'
 import bicycle from '../../assets/images/bicycle.png'
 import camera from '../../assets/images/camera.png'
 import phone from '../../assets/images/phone.png'
-import logo from '../../assets/images/logo.png'
 import {Link} from 'react-router-dom';
-import HomePage from '../Home/HomePage';
-import ProductItem  from '../Home/ProductItem';
 import addCart from './addCart';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import tv from '../../assets/images/tv.png'
 import horse from '../../assets/images/horse.png'
-import ford from '../../assets/images/car.png'
+import car from '../../assets/images/car.png'
 
 
 
 	const Cart = () => {  
-	//const [items] = useContext(addCart)
+		
+	
+	const removeFromCart = (id) => {
+		id.preventDefault()
+		console.log('Remove from cart')
+	}
 
+	const [list, updateList] = useState();
+
+	const handleRemoveItem = (e) => {
+	 const name = e.target.getAttribute("name")
+	 e.preventDefault()
+	 console.log('daghad')
+	  updateList(list.filter(item => item.name !== name));
+	};
+	
 	const productsInCart = [{
 		id: '1',
 		name: 'ROCKING HORSE',
@@ -42,7 +53,7 @@ import ford from '../../assets/images/car.png'
 		price: '$4994',
 		year : "1987",
 		amount : "1",
-		image: ford
+		image: car
 	  },
 	  {
 		id: '4',
@@ -69,15 +80,8 @@ import ford from '../../assets/images/car.png'
 	  }]
 
 
-
-	const handleClick = () =>{
-	console.log('helldsadasdo')
-	}
-	const removeItem = (id) => {
-		console.log('agfadgaga')
-	}
-  return (
 	
+  return (
 	  <div>
 	<div id="page" className="site">
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -86,58 +90,46 @@ import ford from '../../assets/images/car.png'
 	<div className="wrap">
 		<div className="header__container">
 			<div className="logo-mobile"><a href="/" className="header__home"> <img src={logoHeader} alt="" className="header__logo"/> </a></div>
-
-				
 				<nav className="main-nav">
 					<ul className="main-nav__list" role="menubar">
-						
 							<li className="main-nav__list-item" role="menuitem">
 								<a href="" className="main-nav__list-link">
 									<img src={logoHeader} alt="" className="header__logo"/>
 									ABOUT US
 								</a>
 							</li>
-						
 							<li className="main-nav__list-item" role="menuitem">
 								<a href="" className="main-nav__list-link">
 									<img src={logoHeader} alt="" className="header__logo"/>
 									LOCATIONS
 								</a>
 							</li>
-						
 							<li className="main-nav__list-item main-nav__list-item--image" role="menuitem">
 								<a href="" className="header__home-logo">
 									<img src={logoWhite} alt="" className="header__logo"/>
-									
 								</a>
 							</li>
-						
 							<li className="main-nav__list-item" role="menuitem">
 								<a href="" className="main-nav__list-link">
 									<img src={logoHeader} alt="" className="header__logo"/>
 									<Link  className="main-nav__list-link" to="/">SHOP</Link>
 								</a>
 							</li>
-						
 					</ul>
 				</nav>
 				<div className="main-nav-cart">
 					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span className="main-nav-cart-qty">25</span>
+					<span className="main-nav-cart-qty">1</span>
 				</div>
-			
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
 		</div>
 	</div>
 </header>
-
-
 	<div id="content" className="site-content">
 		<div id="primary" className="content-area">
 			<main id="main" className="site-main">
-				
 	<div className="cart">
 	<div className="wrap">
 		<div className="cart__container">
@@ -153,13 +145,12 @@ import ford from '../../assets/images/car.png'
 					<a className="btn btn--black" href="">CHECKOUT</a>
 				</div>
 			</div>
-			
 				<div className="row cart__wrapper">
-					
 				{productsInCart.map(item => 
+
 					<addCart key = {item.id} name={item.name} id={item.id} price={item.price}
-					 year={item.year} amaount={item.amount} image={item.image}/>)}
-					
+					 year={item.year} amount={item.amount} image={item.image}/>)}
+					 
 						<div className="cart__item">
 							<div className="cart__item-body-image">
 								<img src={bicycle} alt="" className="cart__item-img"/>
@@ -171,25 +162,19 @@ import ford from '../../assets/images/car.png'
 								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href="" onClick ={removeItem} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href=""  onClick={handleRemoveItem} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">PRICE: <span></span></span>
 							</div>
 						</div>
-					
 				</div>
-			
 		</div>
 	</div>
 </div>
-
-
 			</main>
 		</div>
 	</div>
-
-	
 </div>
 </div>
 )}

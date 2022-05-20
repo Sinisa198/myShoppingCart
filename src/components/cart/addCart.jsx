@@ -1,5 +1,6 @@
 import React from 'react'
 import logoWhite from '../../assets/images/logo-white.png'
+import cartItem from './cartItem'
 import logoHeader from '../../assets/images/LogoHeader.png'
 import bicycle from '../../assets/images/bicycle.png'
 import camera from '../../assets/images/camera.png'
@@ -7,19 +8,11 @@ import phone from '../../assets/images/phone.png'
 import logo from '../../assets/images/logo.png'
 import ProductItem  from '../Home/ProductItem';
 import {Link} from 'react'
-
-
+import { useState, useContext } from 'react'
+import productInCart from './cartItem'
+import {REMOVE_ITEM} from 'react'
  const addCart = ({name,price,image,amount,year}) => {
-
- // const [items, setItems] = useState([])
-    
- // const addToCart = (name,price) =>{
- //   setItems((prevState) => [...prevState,{name, price}]);
-//}
-
-
-  
-
+   
   return (
     <div>
 	<div id="page" className="site">
@@ -68,7 +61,7 @@ import {Link} from 'react'
 					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span className="main-nav-cart-qty">{amount}</span>
+					<span className="main-nav-cart-qty"></span>
 				</div>
 			
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -91,6 +84,8 @@ import {Link} from 'react'
 				<div className="cart__title">
 					<span className="pretitle">	SHOP</span>
 					<h2 className="section-title">SAME OLD SAME OLD</h2>
+          <h1 className="cart__title">Total amount: $ </h1>
+
 				</div>
 				<div className="cart__top-btn">
 					<a className="btn btn--black" href="">CHECKOUT</a>
@@ -112,7 +107,7 @@ import {Link} from 'react'
 								<span className="cart__item-info">{amount}</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href=""  >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href="" >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">PRICE:{price} <span></span></span>

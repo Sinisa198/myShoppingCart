@@ -2,21 +2,23 @@ import React from 'react'
 import {useState} from 'react'
 import favorite from '../../assets/images/favorite.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
-import {useReducer} from 'react'
 import { useContext } from 'react'
 
  const ProductItem = ({name,price,image}) => {
 
-	
-	const addToCart = () =>{
-		console.log({name,price,image})
+	const [cart, setCart] = useState([]);
+
+	const addToCart = (item) =>{
+		cart.push(item,image,price)
+		console.log(cart)
 	}
 	const handleAddToCart = (item) => {
 		item.preventDefault()
-		addToCart(name,price,image)
+		addToCart(name,price,image,)
 	}
-    const [product, setProducts] = useState(0);
 
+	//Incremente decremente
+    const [product, setProducts] = useState(0);
 		const handleDecremente = () =>{
 			setProducts(amout => amout - 1 )
 		}
