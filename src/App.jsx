@@ -4,6 +4,7 @@ import Cart from './components/cart/cartItem';
 import {Routes, Route, Link, NavLink, Switch} from 'react-router-dom';
 import HomePage  from './components/Home/HomePage';
  import Checkout from './components/Checkout';
+ 
 function App() {
   return (
     <div>

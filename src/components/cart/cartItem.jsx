@@ -11,29 +11,61 @@ import HomePage from '../Home/HomePage';
 import ProductItem  from '../Home/ProductItem';
 import addCart from './addCart';
 import { useContext } from 'react';
+import tv from '../../assets/images/tv.png'
+import horse from '../../assets/images/horse.png'
+import ford from '../../assets/images/car.png'
 
 
-	const Cart = (name, price) => {  
-		const [items] = useContext(addCart)
-	const prod = [{
+
+	const Cart = () => {  
+	//const [items] = useContext(addCart)
+
+	const productsInCart = [{
 		id: '1',
 		name: 'ROCKING HORSE',
 		price: '$4994',
+		year : "1993",
+		amount : "1",
+		image : horse
 	},
 	  {
 		id: '2',
 		name: 'OLD DISK ROTARY PHONE',
 		price: '$2',
+		year : "1974",
+		amount : "1",
+		image : phone
 	  },
 	  {
 		id: '3',
 		name: 'FORD',
 		price: '$4994',
+		year : "1987",
+		amount : "1",
+		image: ford
 	  },
 	  {
 		id: '4',
 		name:'BICYCLE',
 		price: '$10.9',
+		year : "1997",
+		amount : "1",
+		image: bicycle
+	  },
+	  {
+		id: '5',
+		name:'TV',
+		price: '$22.3',
+		year : "1991",
+		amount : "1",
+		image: tv
+	  }, {
+		id: '4',
+		name:'Rangefinder camera',
+		price: '$36.5',
+		year : "1990",
+		amount : "1",
+		image: camera
 	  }]
 
 
@@ -124,7 +156,9 @@ import { useContext } from 'react';
 			
 				<div className="row cart__wrapper">
 					
-				
+				{productsInCart.map(item => 
+					<addCart key = {item.id} name={item.name} id={item.id} price={item.price}
+					 year={item.year} amaount={item.amount} image={item.image}/>)}
 					
 						<div className="cart__item">
 							<div className="cart__item-body-image">
