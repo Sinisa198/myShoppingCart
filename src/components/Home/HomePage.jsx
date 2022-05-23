@@ -9,9 +9,19 @@ import camera from '../../assets/images/camera.png'
 import bicycle from '../../assets/images/bicycle.png'
 import car from '../../assets/images/car.png'
 import phone from '../../assets/images/phone.png'
+import { useContext } from 'react';
+import CartContext from '../../store/cart-contex';
 
-	export const HomePage = () => {
-		
+	export const HomePage = (props) => {
+
+	const cartCtx = useContext(CartContext);
+
+	const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+		return curNumber + item.amount;
+	}, 0);
+
+
+
 	const products = [{
 			id: '1',
 			name: 'ROCKING HORSE',
@@ -49,6 +59,7 @@ import phone from '../../assets/images/phone.png'
 			  image : camera
 		  }
 		 ]
+		
 		
  	 return (
 		  
@@ -88,7 +99,7 @@ import phone from '../../assets/images/phone.png'
 				<div className="main-nav-cart">
 					
 						<Link  className="main-nav-cart-link" to="/cartItem">Cart</Link>
-					<span className="main-nav-cart-qty">2</span>
+					<span className="main-nav-cart-qty">{numberOfCartItems}</span>
 				</div>
 			
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -111,7 +122,8 @@ import phone from '../../assets/images/phone.png'
 
 			
 				<div className="row cards__wrapper">
-				{products.map(item => 
+
+					{products.map(item => 
 					<ProductItem key = {item.id} name={item.name} id={item.id} price={item.price}
 					 image={item.image} />)}
 				

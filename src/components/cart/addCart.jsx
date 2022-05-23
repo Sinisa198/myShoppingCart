@@ -11,8 +11,60 @@ import {Link} from 'react'
 import { useState, useContext } from 'react'
 import productInCart from './cartItem'
 import {REMOVE_ITEM} from 'react'
+import horse from '../../assets/images/horse.png'
+import car from '../../assets/images/car.png'
+import tv from '../../assets/images/tv.png'
+
  const addCart = ({name,price,image,amount,year}) => {
-   
+
+	const productsInCart = [{
+		id: '1',
+		name: 'ROCKING HORSE',
+		price: '$4994',
+		year : "1993",
+		amount : "1",
+		image : horse
+	},
+	  {
+		id: '2',
+		name: 'OLD DISK ROTARY PHONE',
+		price: '$2',
+		year : "1974",
+		amount : "1",
+		image : phone
+	  },
+	  {
+		id: '3',
+		name: 'FORD',
+		price: '$4994',
+		year : "1987",
+		amount : "1",
+		image: car
+	  },
+	  {
+		id: '4',
+		name:'BICYCLE',
+		price: '$10.9',
+		year : "1997",
+		amount : "1",
+		image: bicycle
+	  },
+	  {
+		id: '5',
+		name:'TV',
+		price: '$22.3',
+		year : "1991",
+		amount : "1",
+		image: tv
+	  }, {
+		id: '4',
+		name:'Rangefinder camera',
+		price: '$36.5',
+		year : "1990",
+		amount : "1",
+		image: camera
+	  }]
+
   return (
     <div>
 	<div id="page" className="site">
@@ -93,24 +145,29 @@ import {REMOVE_ITEM} from 'react'
 			</div>
 			
 				<div className="row cart__wrapper">
-					
-				
-					
+
+						{productsInCart.map(item => 
+						<cartItem key = {item.id} name={item.name} id={item.id} price={item.price}
+						 year={item.year} amount={item.amount} image={item.image}/>)}
+
+
 						<div className="cart__item">
 							<div className="cart__item-body-image">
 								<img src={image} alt="" className="cart__item-img"/>
 							</div>
 							<div className="cart__item-details">
-								<span className="cart__item-name">{name}</span>
+								<span className="cart__item-name">RANGEFINDER CAMERA</span>
 								<span className="cart__item-info">BRAND: CLAUDE BUTLER</span>
-								<span className="cart__item-info">{year}</span>
-								<span className="cart__item-info">{amount}</span>
+								<span className="cart__item-info">YEAR OF MANUFACTURE: 1997</span>
+								<span className="cart__item-info">AMOUNT: 1</span>
+
+								
 							</div>
 							<div className="cart__item-button">
 								<a className="btn btn--sm" href="" >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
-								<span className="cards__price">PRICE:{price} <span></span></span>
+								<span className="cards__price">PRICE: <span></span></span>
 							</div>
 						</div>
 					

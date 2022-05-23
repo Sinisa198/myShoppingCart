@@ -4,15 +4,17 @@ import Cart from './components/cart/cartItem';
 import {Routes, Route, Link, NavLink, Switch} from 'react-router-dom';
 import HomePage  from './components/Home/HomePage';
  import Checkout from './components/Checkout';
+import CartProvider from './store/CartProvider';
  
 function App() {
   return (
     <div>
+      <CartProvider>
       <Routes>
         <Route path='/' element ={<HomePage />} />
        <Route path='/cartItem' element = {<Cart />} />
-       <Route path='/Checkout' element = {<Checkout />} />
       </Routes>
+      </CartProvider>
     </div>
   );
 }

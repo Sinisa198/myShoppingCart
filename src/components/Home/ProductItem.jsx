@@ -1,32 +1,46 @@
 import React from 'react'
-import {useState} from 'react'
+import { useState } from 'react'
 import favorite from '../../assets/images/favorite.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
 import { useContext } from 'react'
+import { useReducer } from 'react'
+import cartItem from '../cart/cartItem'
+import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from '../cart/reducers'
+import { useRef } from 'react'
 
- const ProductItem = ({name,price,image}) => {
 
-	const [cart, setCart] = useState([]);
 
-	const addToCart = (item) =>{
-		cart.push(item,image,price)
-		console.log(cart)
+
+ 	const ProductItem = ({name,price,image}) => {
+	
+	const [product, setProducts] = useState(1);
+	
+	const submitHandler = event => {
+		event.preventDefault();
 	}
-	const handleAddToCart = (item) => {
-		item.preventDefault()
-		addToCart(name,price,image,)
-	}
+	const amountInputRef = useRef();
+
+
+
+
 
 	//Incremente decremente
-    const [product, setProducts] = useState(0);
 		const handleDecremente = () =>{
 			setProducts(amout => amout - 1 )
 		}
 		const handleIncremente = () =>{
 			setProducts(amout => amout + 1)
 		}
+
+		const addToCart = (e) =>{
+			e.preventDefault()
+			console.log([name,price,image])
+		 }
+
   return (
+	  
     <div className="col-xl-4 col-lg-4 col-md-6">
+		{ref={amountInputRef}}
 							<div className="cards__item">
 								<div className="cards__item-body">
 									<div className="cards__item-body-image">
@@ -51,7 +65,7 @@ import { useContext } from 'react'
 											</button>
 										</div>
 									</div>
-									<a className="add-to-cart btn" href=""  onClick={handleAddToCart}>ADD TO CART</a>
+									<a className="add-to-cart btn" href="" onClick={addToCart}>ADD TO CART</a>
 									<div className="heart">
 										<img src={favorite} alt="heart" className="heart-icon heart__full"/>
 										<img src={favoriteBorder} alt="heart" className="heart-icon heart__empty"/>

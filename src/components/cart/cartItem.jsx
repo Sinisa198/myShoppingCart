@@ -11,76 +11,23 @@ import { useContext, useState, useEffect } from 'react';
 import tv from '../../assets/images/tv.png'
 import horse from '../../assets/images/horse.png'
 import car from '../../assets/images/car.png'
+import { useReducer } from 'react';
+import  {ADD_PRODUCT, REMOVE_PRODUCT} from './reducers'
+import { shopReducer } from './reducers';
+import ProductItem from '../Home/ProductItem';
 
 
 
-	const Cart = () => {  
-		
 	
+
+	const Cart = (props) => {  
+
+	const [cart, setCart] = useState(0);
+
 	const removeFromCart = (id) => {
 		id.preventDefault()
 		console.log('Remove from cart')
 	}
-
-	const [list, updateList] = useState();
-
-	const handleRemoveItem = (e) => {
-	 const name = e.target.getAttribute("name")
-	 e.preventDefault()
-	 console.log('daghad')
-	  updateList(list.filter(item => item.name !== name));
-	};
-	
-	const productsInCart = [{
-		id: '1',
-		name: 'ROCKING HORSE',
-		price: '$4994',
-		year : "1993",
-		amount : "1",
-		image : horse
-	},
-	  {
-		id: '2',
-		name: 'OLD DISK ROTARY PHONE',
-		price: '$2',
-		year : "1974",
-		amount : "1",
-		image : phone
-	  },
-	  {
-		id: '3',
-		name: 'FORD',
-		price: '$4994',
-		year : "1987",
-		amount : "1",
-		image: car
-	  },
-	  {
-		id: '4',
-		name:'BICYCLE',
-		price: '$10.9',
-		year : "1997",
-		amount : "1",
-		image: bicycle
-	  },
-	  {
-		id: '5',
-		name:'TV',
-		price: '$22.3',
-		year : "1991",
-		amount : "1",
-		image: tv
-	  }, {
-		id: '4',
-		name:'Rangefinder camera',
-		price: '$36.5',
-		year : "1990",
-		amount : "1",
-		image: camera
-	  }]
-
-
-	
   return (
 	  <div>
 	<div id="page" className="site">
@@ -121,7 +68,7 @@ import car from '../../assets/images/car.png'
 					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span className="main-nav-cart-qty">1</span>
+					<span className="main-nav-cart-qty">4</span>
 				</div>
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
 		</div>
@@ -146,10 +93,9 @@ import car from '../../assets/images/car.png'
 				</div>
 			</div>
 				<div className="row cart__wrapper">
-				{productsInCart.map(item => 
 
-					<addCart key = {item.id} name={item.name} id={item.id} price={item.price}
-					 year={item.year} amount={item.amount} image={item.image}/>)}
+
+					
 					 
 						<div className="cart__item">
 							<div className="cart__item-body-image">
@@ -162,7 +108,7 @@ import car from '../../assets/images/car.png'
 								<span className="cart__item-info">AMOUNT: 1</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href=""  onClick={handleRemoveItem} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href=""  onClick={removeFromCart} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">PRICE: <span></span></span>
