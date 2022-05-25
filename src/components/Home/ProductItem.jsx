@@ -2,45 +2,41 @@ import React from 'react'
 import { useState } from 'react'
 import favorite from '../../assets/images/favorite.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
-import { useContext } from 'react'
-import { useReducer } from 'react'
-import cartItem from '../cart/cartItem'
-import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from '../cart/reducers'
-import { useRef } from 'react'
+import { useContext, useRef } from 'react'
+import CartContext from '../../store/cart-contex'
 
-
-
-
- 	const ProductItem = ({name,price,image}) => {
+ 	const ProductItem = ({name,id,price,image}) => {
 	
 	const [product, setProducts] = useState(1);
-	
+
+	const cartCtx = useContext(CartContext);
+
+	const addToCartHandler = amount => {
+		
+		console.log(name)
+		amount.preventDefault()
+		cartCtx.addItem({
+			id: id,
+			name: name,
+			price: price,
+			image: image
+		});
+	}
+
 	const submitHandler = event => {
 		event.preventDefault();
 	}
-	const amountInputRef = useRef();
-
-
-
-
 
 	//Incremente decremente
 		const handleDecremente = () =>{
-			setProducts(amout => amout - 1 )
+			setProducts(product => Number(product)  - 1 )
 		}
 		const handleIncremente = () =>{
-			setProducts(amout => amout + 1)
+			setProducts(product => Number(product) + 1)
 		}
-
-		const addToCart = (e) =>{
-			e.preventDefault()
-			console.log([name,price,image])
-		 }
-
+	
   return (
-	  
-    <div className="col-xl-4 col-lg-4 col-md-6">
-		{ref={amountInputRef}}
+    <div className="col-xl-4 col-lg-4 col-md-6"  >
 							<div className="cards__item">
 								<div className="cards__item-body">
 									<div className="cards__item-body-image">
@@ -51,7 +47,7 @@ import { useRef } from 'react'
 								</div>
 								<div className="cards__item-footer">
 									<div className="quantity">
-										<input className="qty" type="number" step="1" min="1" value={product} />
+											<input className="qty" type="number" step="1" min="1" onChange={submitHandler} value={product}/>
 										<div className="quantity__button">
 											<button className="quantity-add js-inc quantity-button" onClick={handleIncremente}>
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -65,7 +61,7 @@ import { useRef } from 'react'
 											</button>
 										</div>
 									</div>
-									<a className="add-to-cart btn" href="" onClick={addToCart}>ADD TO CART</a>
+									<a className="add-to-cart btn" href="" onClick={addToCartHandler}>ADD TO CART</a>
 									<div className="heart">
 										<img src={favorite} alt="heart" className="heart-icon heart__full"/>
 										<img src={favoriteBorder} alt="heart" className="heart-icon heart__empty"/>
@@ -75,5 +71,4 @@ import { useRef } from 'react'
 						</div>
   )
 }
-
 export default ProductItem

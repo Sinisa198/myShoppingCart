@@ -12,22 +12,15 @@ import tv from '../../assets/images/tv.png'
 import horse from '../../assets/images/horse.png'
 import car from '../../assets/images/car.png'
 import { useReducer } from 'react';
-import  {ADD_PRODUCT, REMOVE_PRODUCT} from './reducers'
-import { shopReducer } from './reducers';
-import ProductItem from '../Home/ProductItem';
-
-
-
-	
 
 	const Cart = (props) => {  
-
 	const [cart, setCart] = useState(0);
 
 	const removeFromCart = (id) => {
 		id.preventDefault()
 		console.log('Remove from cart')
 	}
+
   return (
 	  <div>
 	<div id="page" className="site">
@@ -68,7 +61,7 @@ import ProductItem from '../Home/ProductItem';
 					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span className="main-nav-cart-qty">4</span>
+					<span className="main-nav-cart-qty"></span>
 				</div>
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
 		</div>
@@ -111,7 +104,7 @@ import ProductItem from '../Home/ProductItem';
 								<a className="btn btn--sm" href=""  onClick={removeFromCart} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
-								<span className="cards__price">PRICE: <span></span></span>
+								<span className="cards__price">PRICE: $10.9 <span></span></span>
 							</div>
 						</div>
 				</div>

@@ -10,7 +10,6 @@ import ProductItem  from '../Home/ProductItem';
 import {Link} from 'react'
 import { useState, useContext } from 'react'
 import productInCart from './cartItem'
-import {REMOVE_ITEM} from 'react'
 import horse from '../../assets/images/horse.png'
 import car from '../../assets/images/car.png'
 import tv from '../../assets/images/tv.png'
