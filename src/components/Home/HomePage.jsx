@@ -19,7 +19,7 @@ import CartContext from '../../store/cart-contex';
 
 	const { items } = cartCtx;
 
- 	 const numberOfCartItems = items.length;
+ 	 const numberOfCartItems = items.length
   
 	
 	const products = [{

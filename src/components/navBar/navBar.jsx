@@ -8,7 +8,6 @@ const navBar = () => {
 
     <div>
   
-	  	{console.log('hello')}
 		<div className="header__container">
 			<div className="header__home-logo"><a href="/" className="header__home"> <img src="/assets/images/cart/LogoHeader.png" alt="" className="header__logo"/> </a></div>
 
