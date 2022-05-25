@@ -1,35 +1,28 @@
 import React from 'react'
 import './cartItem.css';
-import { ReactDOM } from 'react';
 import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
-import bicycle from '../../assets/images/bicycle.png'
-import camera from '../../assets/images/camera.png'
-import phone from '../../assets/images/phone.png'
 import {Link} from 'react-router-dom';
-import addCart from './addCart';
 import { useContext, useState, useEffect,  } from 'react';
-import tv from '../../assets/images/tv.png'
-import horse from '../../assets/images/horse.png'
-import car from '../../assets/images/car.png'
-import { useReducer } from 'react';
 import CartContext from '../../store/cart-contex';
 
 
+	const Cart = (props) => { 
 
-
-	const Cart = (props) => {  
 	const [cart, setCart] = useState(0);
+	const cartCtx = useContext(CartContext)
+
+	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`
 
 	const removeFromCart = (id) => {
 		id.preventDefault()
 		console.log('Remove from cart')
 	}
-	const cartCtx = useContext(CartContext)
-	
 
+	const { items } = cartCtx;
+ 	 const numberOfCartItems = items.length
+	
   return (
-	  <>
 	  <div>
 	<div id="page" className="site">
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -69,7 +62,7 @@ import CartContext from '../../store/cart-contex';
 					<a href="" className="main-nav-cart-link">
 						Cart
 					</a>
-					<span className="main-nav-cart-qty"></span>
+					<span className="main-nav-cart-qty">{numberOfCartItems}</span>
 				</div>
 			<a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
 		</div>
@@ -88,6 +81,7 @@ import CartContext from '../../store/cart-contex';
 				<div className="cart__title">
 					<span className="pretitle">	SHOP</span>
 					<h2 className="section-title">SAME OLD SAME OLD</h2>
+					<h2 className="total-price">Total price : {totalPrice}</h2>
 				</div>
 				<div className="cart__top-btn">
 					<a className="btn btn--black" href="">CHECKOUT</a>
@@ -96,40 +90,24 @@ import CartContext from '../../store/cart-contex';
 				<div className="row cart__wrapper">
 
 				{console.log(cartCtx)}
-				{cartCtx.items.map(item =>{ return <div className="cart__item">
+
+				{cartCtx.items.map(item =>{ return <div key={item.id} className="cart__item">
 							<div className="cart__item-body-image">
 								<img src={item.image} alt="" className="cart__item-img"/>
 							</div>
 							<div className="cart__item-details">
 								<span className="cart__item-name">{item.name}</span>
-								<span className="cart__item-info">{item.amount}</span>
+								<span  className="cart__item-info" >Amount: {item.amount}</span>
 							</div>
 							<div className="cart__item-button">
 								<a className="btn btn--sm" href=""  onClick={removeFromCart} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
-								<span className="cards__price">{item.price} </span>
+								<span className="cards__price">Price : {item.price} </span>
 							</div>
 						</div>})}
 				
 					 
-						{/* <div className="cart__item">
-							<div className="cart__item-body-image">
-								<img src={props.image} alt="" className="cart__item-img"/>
-							</div>
-							<div className="cart__item-details">
-								<span className="cart__item-name">{props.name}</span>
-								<span className="cart__item-info">BRAND: CLAUDE BUTLER</span>
-								<span className="cart__item-info">{props.year}</span>
-								<span className="cart__item-info">{props.amount}</span>
-							</div>
-							<div className="cart__item-button">
-								<a className="btn btn--sm" href=""  onClick={removeFromCart} >REMOVE FROM CART</a>
-							</div>
-							<div className="cart__item-price">
-								<span className="cards__price">{props.price} <span></span></span>
-							</div>
-						</div> */}
 				</div>
 		</div>
 	</div>
@@ -139,7 +117,6 @@ import CartContext from '../../store/cart-contex';
 	</div>
 </div>
 </div>
-</>
 )}
 
 export default Cart
