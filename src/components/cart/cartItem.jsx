@@ -3,12 +3,12 @@ import './cartItem.css';
 import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
 import {Link} from 'react-router-dom';
-import { useContext, useState  } from 'react';
+import { useContext } from 'react';
 import CartContext from '../../store/cart-contex';
 
 	const Cart = (props) => { 
 
-	const [cart, setCart] = useState(0);
+	
 	const cartCtx = useContext(CartContext)
 	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
 
@@ -86,9 +86,10 @@ import CartContext from '../../store/cart-contex';
 			</div>
 				<div className="row cart__wrapper">
 
-				{console.log(Number(cartCtx.totalAmount))}
+				{console.log(cartCtx.totalAmount)}
 
 				{console.log(cartCtx)}
+
 				{cartCtx.items.map(item =>{ return <div key={item.id} className="cart__item">
 							<div className="cart__item-body-image">
 								<img src={item.image} alt="" className="cart__item-img"/>

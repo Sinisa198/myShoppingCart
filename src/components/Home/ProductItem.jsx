@@ -15,11 +15,13 @@ import CartContext from '../../store/cart-contex'
 		
 		console.log(name,price)
 		amount.preventDefault()
+
 		cartCtx.addItem({
 			id: id,
 			name: name,
 			price: price,
-			image: image
+			image: image,
+			amount: 1
 		});
 	}
 
