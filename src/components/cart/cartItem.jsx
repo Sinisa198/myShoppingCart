@@ -10,12 +10,13 @@ import CartContext from '../../store/cart-contex';
 
 	
 	const cartCtx = useContext(CartContext)
-	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
+	const totalPrice = `$${cartCtx.totalAmount}` ;
 
-	const cartItemRemoveHandler = (id) =>{
+	const cartItemRemoveHandler = (id) => {
 		cartCtx.removeItem(id);
-	}
-
+	  };
+	
+	
 	const { items } = cartCtx;
  	 const numberOfCartItems = items.length
 	
@@ -102,7 +103,7 @@ import CartContext from '../../store/cart-contex';
 								<a className="btn btn--sm" href=""   onClick={cartItemRemoveHandler} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
-								<span className="cards__price">Price : {item.price} </span>
+								<span className="cards__price">Price : ${item.price} </span>
 							</div>
 						</div>})}
 				</div>

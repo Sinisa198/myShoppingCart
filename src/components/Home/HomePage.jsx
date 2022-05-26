@@ -25,37 +25,37 @@ import CartContext from '../../store/cart-contex';
 	const products = [{
 			id: '1',
 			name: 'ROCKING HORSE',
-			price: '$4994',
+			price: '4994',
 			image: horse
 		},
 		  {
 			id: '2',
 			name: 'OLD DISK ROTARY PHONE',
-			price: '$2',
+			price: '2',
 			image: phone
 		  },
 		  {
 			id: '3',
 			name: 'FORD',
-			price: '$4994',
+			price: '4994',
 			image :  car
 		  },
 		  {
 			id: '4',
 			name:'BICYCLE',
-			price: '$10.9',
+			price: '10.9',
 			image :  bicycle
 		  },
 		  {
 			id : '5',
 			name : 'TV',
-			price : '$22.3',
+			price : '22.3',
 			image :  tv
 		  },
 		  {
 			  id: '6',
 			  name: 'RANGEFINDER CAMERA',
-			  price: '$36.5',
+			  price: '36.5',
 			  image : camera
 		  }
 		 ];

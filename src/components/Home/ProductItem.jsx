@@ -21,7 +21,7 @@ import CartContext from '../../store/cart-contex'
 			name: name,
 			price: price,
 			image: image,
-			amount: 1
+			amount: 1,
 		});
 	}
 
@@ -44,7 +44,7 @@ import CartContext from '../../store/cart-contex'
 										<img src={image} alt="slika" className="cards__item-img"/>
 									</div>
 									<span className="cards__item-body-name">{name}</span>
-									<span className="cards__item-body-price">{price}</span>
+									<span className="cards__item-body-price">${price}</span>
 								</div>
 								<div className="cards__item-footer">
 									<div className="quantity">
