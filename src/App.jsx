@@ -3,6 +3,7 @@ import Cart from './components/cart/cartItem';
 import {Routes, Route, Link, NavLink, Switch} from 'react-router-dom';
 import HomePage  from './components/Home/HomePage';
 import CartProvider from './store/CartProvider';
+import Checkout from './components/Checkout';
  
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
       <Routes>
         <Route path='/' element ={<HomePage />} />
        <Route path='/cartItem' element = {<Cart />} />
+       <Route path='/checkout' element = {<Checkout />} />
       </Routes>
 
       </CartProvider>

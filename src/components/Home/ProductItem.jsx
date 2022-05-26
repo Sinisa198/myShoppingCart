@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import favorite from '../../assets/images/favorite.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
-import { useContext, useRef } from 'react'
+import { useContext } from 'react'
 import CartContext from '../../store/cart-contex'
 
  	const ProductItem = ({name,id,price,image}) => {
@@ -13,7 +13,7 @@ import CartContext from '../../store/cart-contex'
 
 	const addToCartHandler = amount => {
 		
-		console.log(name)
+		console.log(name,price)
 		amount.preventDefault()
 		cartCtx.addItem({
 			id: id,
@@ -34,7 +34,6 @@ import CartContext from '../../store/cart-contex'
 		const handleIncremente = () =>{
 			setProducts(product => Number(product) + 1)
 		}
-	
   return (
     <div className="col-xl-4 col-lg-4 col-md-6"  >
 							<div className="cards__item">

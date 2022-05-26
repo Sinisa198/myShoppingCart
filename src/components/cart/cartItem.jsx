@@ -3,20 +3,17 @@ import './cartItem.css';
 import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
 import {Link} from 'react-router-dom';
-import { useContext, useState, useEffect,  } from 'react';
+import { useContext, useState  } from 'react';
 import CartContext from '../../store/cart-contex';
-
 
 	const Cart = (props) => { 
 
 	const [cart, setCart] = useState(0);
 	const cartCtx = useContext(CartContext)
+	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
 
-	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`
-
-	const removeFromCart = (id) => {
-		id.preventDefault()
-		console.log('Remove from cart')
+	const cartItemRemoveHandler = (id) =>{
+		cartCtx.removeItem(id);
 	}
 
 	const { items } = cartCtx;
@@ -84,13 +81,14 @@ import CartContext from '../../store/cart-contex';
 					<h2 className="total-price">Total price : {totalPrice}</h2>
 				</div>
 				<div className="cart__top-btn">
-					<a className="btn btn--black" href="">CHECKOUT</a>
+					<Link className="btn btn--black" to='/checkout' href="">CHECKOUT </Link>
 				</div>
 			</div>
 				<div className="row cart__wrapper">
 
-				{console.log(cartCtx)}
+				{console.log(Number(cartCtx.totalAmount))}
 
+				{console.log(cartCtx)}
 				{cartCtx.items.map(item =>{ return <div key={item.id} className="cart__item">
 							<div className="cart__item-body-image">
 								<img src={item.image} alt="" className="cart__item-img"/>
@@ -100,14 +98,12 @@ import CartContext from '../../store/cart-contex';
 								<span  className="cart__item-info" >Amount: {item.amount}</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href=""  onClick={removeFromCart} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href=""   onClick={cartItemRemoveHandler} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">Price : {item.price} </span>
 							</div>
 						</div>})}
-				
-					 
 				</div>
 		</div>
 	</div>
