@@ -1,4 +1,4 @@
-import {React, useContext, useState} from 'react'
+import { React, useContext, useState } from 'react'
 
 import favorite from '../../assets/images/favorite.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
@@ -18,7 +18,7 @@ import CartContext from '../../store/cartContex'
 			name: name,
 			price: price,
 			image: image,
-			amount:  product,
+			amount: product,
 		});
 	}
 

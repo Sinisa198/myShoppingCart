@@ -1,15 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 import logoHeader from '../assets/images/LogoHeader.png'
 import logoFooter from '../assets/images/LogoFooter.png'
 import './Cart/cartItem.css'
-
+import CartProvider from '../store/cartProvider'
 
 function Checkout(item) {
+  
   return (
-		  
+		  <CartProvider>
       <div id="page" className="site">
       <a href=""></a>
     <a className="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -83,7 +84,7 @@ function Checkout(item) {
     </div>
   </footer>
   </div>
-      
+  </CartProvider>
     );
   };
     

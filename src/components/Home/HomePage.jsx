@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import logoHeader from '../../assets/images/LogoHeader.png'
 import logoFooter from '../../assets/images/LogoFooter.png'
