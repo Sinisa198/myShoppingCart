@@ -18,7 +18,7 @@ import CartContext from '../../store/cartContex'
 			name: name,
 			price: price,
 			image: image,
-			amount: 1,
+			amount:  product,
 		});
 	}
 
@@ -28,9 +28,11 @@ import CartContext from '../../store/cartContex'
 
 	//Incremente decremente
 		const handleDecremente = () =>{
+			if(product >1)
 			setProducts(product => Number(product)  - 1 )
 		}
 		const handleIncremente = () =>{
+			if(product < 20)
 			setProducts(product => Number(product) + 1)
 		}
 		

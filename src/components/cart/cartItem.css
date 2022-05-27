@@ -3403,7 +3403,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     font-family: "Times New Roman", Arial, Helvetica, sans-serif;
     text-align: center;
   }
-  
+  .checkout_total_price{
+    font-size:50px;
+    margin-top: 70px;
+  }
   /*--------------------------------------------------------------
   ## Layout
   --------------------------------------------------------------*/

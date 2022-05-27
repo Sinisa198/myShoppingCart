@@ -7,8 +7,7 @@ import logoFooter from '../assets/images/LogoFooter.png'
 import './Cart/cartItem.css'
 
 
-
-function Checkout() {
+function Checkout(item) {
   return (
 		  
       <div id="page" className="site">
@@ -32,9 +31,9 @@ function Checkout() {
                   </a>
                 </li>
                 <li className="main-nav__list-item" role="menuitem">
-                  <a href="" className="main-nav__list-link">
+                  <Link href="" className="main-nav__list-link"  to="/">
                     SHOP
-                  </a>
+                  </Link>
                 </li>
             </ul>
           </nav>
@@ -57,7 +56,7 @@ function Checkout() {
       <div className="cards__container">
         <span className="pretitle">SHOP</span>
         <h2 className="section-title">SAME OLD SAME OLD</h2>
-        <h1 className="total_price">Total price :</h1>
+        <h1 className="checkout_total_price">Total price : {item.totalPrice}</h1>
           <div className="row cards__wrapper">
   
             

@@ -6,21 +6,19 @@ import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
 import CartContext from '../../store/cartContex';
 
-
 	
-	const Cart = ({cart, setCart}) => { 
+	const Cart = () => { 
 	
-		
+	
 	const cartCtx = useContext(CartContext)
 	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}` ;
 	const { items } = cartCtx;
  	const numberOfCartItems = items.length
 
-	 const cartItemRemoveHandler = (productToRemove) => {
-    	setCart(
-      cart.filter((product) => product !== productToRemove)
-    );
-  };
+	
+	 const cartItemRemoveHandler = (id) => {
+		cartCtx.removeItem(id);
+	  };
   return (
 	  <div>
 	<div id="page" className="site">
@@ -99,7 +97,7 @@ import CartContext from '../../store/cartContex';
 								<span  className="cart__item-info" >Amount: {item.amount}</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href="" onClick={() => cartItemRemoveHandler(cartCtx.product)} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href=""onClick={() => cartItemRemoveHandler()} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">Price : ${item.price} </span>
