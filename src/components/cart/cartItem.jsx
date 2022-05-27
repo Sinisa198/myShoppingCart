@@ -1,4 +1,4 @@
-import {React, useContext} from 'react'
+import { React, useContext, useState } from 'react'
 import {Link} from 'react-router-dom';
 
 import './cartItem.css';
@@ -6,20 +6,21 @@ import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
 import CartContext from '../../store/cartContex';
 
-	const Cart = (props) => { 
 
 	
+	const Cart = ({cart, setCart}) => { 
+	
+		
 	const cartCtx = useContext(CartContext)
 	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}` ;
-
-	const cartItemRemoveHandler = (id) => {
-		id.preventDefault()
-		cartCtx.removeItem(id);
-	  };
-	
 	const { items } = cartCtx;
- 	 const numberOfCartItems = items.length
+ 	const numberOfCartItems = items.length
 
+	 const cartItemRemoveHandler = (productToRemove) => {
+    	setCart(
+      cart.filter((product) => product !== productToRemove)
+    );
+  };
   return (
 	  <div>
 	<div id="page" className="site">
@@ -87,9 +88,7 @@ import CartContext from '../../store/cartContex';
 			</div>
 				<div className="row cart__wrapper">
 
-				{console.log(cartCtx.totalAmount)}
-
-				{console.log(cartCtx)}
+			
 
 				{cartCtx.items.map(item =>{ return <div key={item.id} className="cart__item">
 							<div className="cart__item-body-image">
@@ -100,7 +99,7 @@ import CartContext from '../../store/cartContex';
 								<span  className="cart__item-info" >Amount: {item.amount}</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href=""   onClick={() => cartItemRemoveHandler()} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href="" onClick={() => cartItemRemoveHandler(cartCtx.product)} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">Price : ${item.price} </span>
@@ -117,4 +116,4 @@ import CartContext from '../../store/cartContex';
 </div>
 )}
 
-export default Cart
+export default Cart;

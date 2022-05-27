@@ -1,7 +1,7 @@
 import CartContext from "./cartContex";
 import { useReducer } from "react";
 
-
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 
 const defaultCartState = {
     items: [],

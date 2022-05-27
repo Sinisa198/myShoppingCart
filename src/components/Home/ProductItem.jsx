@@ -12,9 +12,7 @@ import CartContext from '../../store/cartContex'
 
 	const addToCartHandler = amount => {
 		
-		console.log(name,price)
 		amount.preventDefault()
-
 		cartCtx.addItem({
 			id: id,
 			name: name,

@@ -6,14 +6,6 @@ import HomePage  from './components/Home/homePage';
 import CartProvider from './store/cartProvider';
 import Checkout from './components/checkout';
 
-import { Routes, Route, Link, NavLink, Switch } from 'react-router-dom';
-
-import './App.css';
-import Cart from './components/cart/cartItem';
-import HomePage from './components/Home/HomePage';
-import CartProvider from './store/CartProvider';
-import Checkout from './components/Checkout';
-
 export function App() {
   return (
     <div>
