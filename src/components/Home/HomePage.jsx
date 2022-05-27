@@ -1,27 +1,27 @@
 import React from 'react';
+import { useContext } from 'react';
+import {Link} from 'react-router-dom'
+
 import logoHeader from '../../assets/images/LogoHeader.png'
 import logoFooter from '../../assets/images/LogoFooter.png'
-import {Link} from 'react-router-dom'
-import ProductItem from './ProductItem';
+import ProductItem from './productItem';
 import horse from '../../assets/images/horse.png'
 import tv from '../../assets/images/tv.png'
 import camera from '../../assets/images/camera.png'
 import bicycle from '../../assets/images/bicycle.png'
 import car from '../../assets/images/car.png'
 import phone from '../../assets/images/phone.png'
-import { useContext } from 'react';
-import CartContext from '../../store/cart-contex';
+import CartContext from '../../store/cartContex';
+
 
 	 const HomePage = (props) => {
 
 	const cartCtx = useContext(CartContext);
 
-
 	const { items } = cartCtx;
 
- 	 const numberOfCartItems = items.length
+ 	const numberOfCartItems = items.length
   
-	
 	const products = [{
 			id: '1',
 			name: 'ROCKING HORSE',
@@ -61,6 +61,7 @@ import CartContext from '../../store/cart-contex';
 		 ];
 		
  	 return (
+		  
     <div id="page" className="site">
 		<a href=""></a>
 	<a className="skip-link screen-reader-text" href="#content">Skip to content</a>

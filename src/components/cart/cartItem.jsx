@@ -1,25 +1,25 @@
-import React from 'react'
+import {React, useContext} from 'react'
+import {Link} from 'react-router-dom';
+
 import './cartItem.css';
 import logoWhite from '../../assets/images/logo-white.png'
 import logoHeader from '../../assets/images/LogoHeader.png'
-import {Link} from 'react-router-dom';
-import { useContext } from 'react';
-import CartContext from '../../store/cart-contex';
+import CartContext from '../../store/cartContex';
 
 	const Cart = (props) => { 
 
 	
 	const cartCtx = useContext(CartContext)
-	const totalPrice = `$${cartCtx.totalAmount}` ;
+	const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}` ;
 
 	const cartItemRemoveHandler = (id) => {
+		id.preventDefault()
 		cartCtx.removeItem(id);
 	  };
 	
-	
 	const { items } = cartCtx;
  	 const numberOfCartItems = items.length
-	
+
   return (
 	  <div>
 	<div id="page" className="site">
@@ -79,7 +79,7 @@ import CartContext from '../../store/cart-contex';
 				<div className="cart__title">
 					<span className="pretitle">	SHOP</span>
 					<h2 className="section-title">SAME OLD SAME OLD</h2>
-					<h2 className="total-price">Total price : {totalPrice}</h2>
+					<h3 className="total-price">Total price : {totalPrice}</h3>
 				</div>
 				<div className="cart__top-btn">
 					<Link className="btn btn--black" to='/checkout' href="">CHECKOUT </Link>
@@ -100,7 +100,7 @@ import CartContext from '../../store/cart-contex';
 								<span  className="cart__item-info" >Amount: {item.amount}</span>
 							</div>
 							<div className="cart__item-button">
-								<a className="btn btn--sm" href=""   onClick={cartItemRemoveHandler} >REMOVE FROM CART</a>
+								<a className="btn btn--sm" href=""   onClick={() => cartItemRemoveHandler()} >REMOVE FROM CART</a>
 							</div>
 							<div className="cart__item-price">
 								<span className="cards__price">Price : ${item.price} </span>
