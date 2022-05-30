@@ -14,10 +14,18 @@ const Cart = (cart, setCart) => {
   const { items } = cartCtx;
   const numberOfCartItems = cartCtx.items.length  ;
 	console.log(items)
+
+const Cart = (cart, setCart) => {
+  const cartCtx = useContext(CartContext);
+  const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const { items } = cartCtx;
+  const numberOfCartItems = items.length;
+
   const cartItemRemoveHandler = (event, item) => {
     event.preventDefault();
     cartCtx.removeItem(item.id);
   };
+
   return (
     <div>
       <div id='page' className='site'>
@@ -94,7 +102,7 @@ const Cart = (cart, setCart) => {
                         <span className='pretitle'> SHOP</span>
                         <h2 className='section-title'>SAME OLD SAME OLD</h2>
                         <h3 className='total-price'>
-                          Total price :{totalPrice}
+                          Total price : {totalPrice}
                         </h3>
                       </div>
                       <div className='cart__top-btn'>
@@ -115,6 +123,6 @@ const Cart = (cart, setCart) => {
       </div>
     </div>
   );
-};
+}};
 
-export default Cart;
+export default Cart

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 
+import CartContext from '../store/cartContex';
 
 const CartItem = ({ item, remove }) => {
   return (
