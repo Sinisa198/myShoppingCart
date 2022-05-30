@@ -6,7 +6,7 @@ import logoHeader from '../assets/images/LogoHeader.png';
 import logoFooter from '../assets/images/LogoFooter.png';
 import CartProvider from '../store/cartProvider';
 import './Cart/cartItem.css'
-import NavBarForCheckout from './NavBarForCheckout';
+import NavBarForCheckout from './NavBars/NavBarForCheckout'
 
 const Checkout = () =>{
   const cartCtx = useContext(CartContext);

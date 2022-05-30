@@ -1,8 +1,8 @@
 import React from 'react'
 import {useContext} from 'react'
 import {Link} from 'react-router-dom'
-import CartContext from '../store/cartContex'
-import logoHeader from '../assets/images/LogoHeader.png'
+import CartContext from '../../store/cartContex'
+import logoHeader from '../../assets/images/LogoHeader.png'
 
 
   

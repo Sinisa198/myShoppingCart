@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './cartItem.css';
 import CartContext from '../../store/cartContex';
 import CartItem from '../CartItem';
-import NavBarForCart from './NavBarForCart';
+import NavBarForCart from '../NavBars/NavBarForCart';
 
 const Cart = (cart, setCart) => {
 	
@@ -12,7 +12,7 @@ const Cart = (cart, setCart) => {
   const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
   const { items } = cartCtx;
   const numberOfCartItems = items.length;
-
+	
   const cartItemRemoveHandler = (event, item) => {
     event.preventDefault();
     cartCtx.removeItem(item.id);

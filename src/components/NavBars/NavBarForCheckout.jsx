@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useContext} from 'react'
-import logoHeader from '../assets/images/LogoHeader.png'
-import CartContext from '../store/cartContex'
+import logoHeader from '../../assets/images/LogoHeader.png'
+import CartContext from '../../store/cartContex'
 
 const NavBarForCheckout = () => {
 
@@ -15,17 +15,17 @@ const NavBarForCheckout = () => {
     <div className='wrap'>
       <div className='header__container'>
         <div className='header__home-logo'>
-          <a href='/' className='header__home'>
+          <Link to='/' className='header__home'>
             {' '}
             <img src={logoHeader} alt='' className='header__logo' />{' '}
-          </a>
+          </Link>
         </div>
         <nav className='main-nav'>
           <ul className='main-nav__list' role='menubar'>
             <li className='main-nav__list-item' role='menuitem'>
-              <a href='' className='main-nav__list-link'>
+              <Link to='' className='main-nav__list-link'>
                 ABOUT US
-              </a>
+              </Link>
             </li>
             <li className='main-nav__list-item' role='menuitem'>
               <Link to='' className='main-nav__list-link'>
@@ -48,12 +48,12 @@ const NavBarForCheckout = () => {
           </span>
         </div>
 
-        <a
-          href=''
+        <Link
+          to=''
           className='site-header__hamburger hamburger js-menu-btn'
         >
-          <span></span>
-        </a>
+          <span>2</span>
+        </Link>
       </div>
     </div>
   </header>

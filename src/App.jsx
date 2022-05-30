@@ -6,7 +6,7 @@ import HomePage  from './components/Home/HomePage';
 import './App.css';
 import CartProvider from './store/cartProvider';
 import Checkout from './components/Checkout';
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBars/NavBar";
 
 const  App = () => {
   return (

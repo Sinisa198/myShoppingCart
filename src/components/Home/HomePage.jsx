@@ -12,14 +12,12 @@ import bicycle from '../../assets/images/bicycle.png';
 import car from '../../assets/images/car.png';
 import phone from '../../assets/images/phone.png';
 import CartContext from '../../store/cartContex';
-import NavBar from '../NavBar';
+import NavBar from '../NavBars/NavBar';
 
 const HomePage = () => {
   const cartCtx = useContext(CartContext);
 
-  const { items } = cartCtx;
 
-  const numberOfCartItems = items.length;
 
   const products = [
     {
