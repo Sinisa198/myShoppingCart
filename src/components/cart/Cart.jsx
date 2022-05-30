@@ -17,7 +17,6 @@ const Cart = (cart, setCart) => {
     event.preventDefault();
     cartCtx.removeItem(item.id);
   };
-
   return (
     <div>
       <div id='page' className='site'>

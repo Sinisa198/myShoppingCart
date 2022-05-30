@@ -1,6 +1,5 @@
 import CartContext from './cartContex';
 import { useReducer } from 'react';
-import { Link } from 'react-router-dom';
 
 const defaultCartState = {
   items: [],
@@ -39,17 +38,16 @@ const cartReducer = (state, action) => {
       (item) => item.id === action.id
     );
     const existingItem = state.items[existingCartItemIndex];
-    const updatedTotalAmount = state.totalAmount - existingItem.price;
-    let updatedItems;
 
-    if (existingItem.amount === 1 ) {
+    const updatedTotalAmount = state.totalAmount  -  existingItem.amount * existingItem.price;
+    let updatedItems;
+    if (existingItem.amount ) {
       updatedItems = state.items.filter((item) => item.id !== action.id);
     }
-   
-   
+
     return {
       items: updatedItems,
-      totalAmount: updatedTotalAmount,
+      totalAmount: updatedTotalAmount
     };
   }
 

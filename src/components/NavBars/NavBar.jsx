@@ -7,7 +7,7 @@ import logoHeader from '../../assets/images/LogoHeader.png'
 
   
     
-function NavBar() {
+function NavBar(props) {
 
     const cartCtx = useContext(CartContext);
     const { items } = cartCtx;
