@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-
-import CartContext from '../store/cartContex';
+import { Link } from 'react-router-dom';
 
 const CartItem = ({ item, remove }) => {
   return (
@@ -14,13 +12,13 @@ const CartItem = ({ item, remove }) => {
           <span className='cart__item-info'>Amount: {item.amount}</span>
         </div>
         <div className='cart__item-button'>
-          <a
+          <Link
             className='btn btn--sm'
-            href=''
+            to=''
             onClick={(event) => remove(event, item)}
           >
             REMOVE FROM CART
-          </a>
+          </Link>
         </div>
         <div className='cart__item-price'>
           <span className='cards__price'>Price : ${item.price} </span>

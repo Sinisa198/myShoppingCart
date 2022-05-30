@@ -1,4 +1,5 @@
 import { React, useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import favorite from '../../assets/images/favorite.png';
 import favoriteBorder from '../../assets/images/favorite-border.png';
@@ -10,7 +11,6 @@ const ProductItem = ({ name, id, price, image }) => {
   const cartCtx = useContext(CartContext);
 
   const addToCartHandler = (amount) => {
-    console.log('amount :', amount)
     amount.preventDefault();
     cartCtx.addItem({
       id: id,
@@ -25,14 +25,12 @@ const ProductItem = ({ name, id, price, image }) => {
     event.preventDefault();
   };
 
-  //Incremente decremente
   const handleDecremente = () => {
     if (product > 1) setProducts((product) => Number(product) - 1);
   };
   const handleIncremente = () => {
     if (product < 20) setProducts((product) => Number(product) + 1);
   };
-
   return (
     <div className='col-xl-4 col-lg-4 col-md-6'>
       <div className='cards__item'>

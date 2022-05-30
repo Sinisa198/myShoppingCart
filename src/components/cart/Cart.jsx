@@ -2,20 +2,12 @@ import { React, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import './cartItem.css';
-import logoWhite from '../../assets/images/logo-white.png';
-import logoHeader from '../../assets/images/LogoHeader.png';
 import CartContext from '../../store/cartContex';
 import CartItem from '../CartItem';
+import NavBarForCart from './NavBarForCart';
 
 const Cart = (cart, setCart) => {
-
-  const cartCtx = useContext(CartContext);
-  const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
-  const { items } = cartCtx;
-  const numberOfCartItems = cartCtx.items.length  ;
-	console.log(items)
-
-const Cart = (cart, setCart) => {
+	
   const cartCtx = useContext(CartContext);
   const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
   const { items } = cartCtx;
@@ -29,63 +21,10 @@ const Cart = (cart, setCart) => {
   return (
     <div>
       <div id='page' className='site'>
-        <a className='skip-link screen-reader-text' href='#content'>
+        <Link className='skip-link screen-reader-text' to='#content'>
           Skip to content
-        </a>
-        <header className='header js-site-header'>
-          <div className='header__overlay'></div>
-          <div className='wrap'>
-            <div className='header__container'>
-              <div className='logo-mobile'>
-                <a href='/' className='header__home'>
-                  {' '}
-                  <img src={logoHeader} alt='' className='header__logo' />{' '}
-                </a>
-              </div>
-              <nav className='main-nav'>
-                <ul className='main-nav__list' role='menubar'>
-                  <li className='main-nav__list-item' role='menuitem'>
-                    <a href='' className='main-nav__list-link'>
-                      <img src={logoHeader} alt='' className='header__logo' />
-                      ABOUT US
-                    </a>
-                  </li>
-                  <li className='main-nav__list-item' role='menuitem'>
-                    <a href='' className='main-nav__list-link'>
-                      <img src={logoHeader} alt='' className='header__logo' />
-                      LOCATIONS
-                    </a>
-                  </li>
-                  <li
-                    className='main-nav__list-item main-nav__list-item--image'
-                    role='menuitem'
-                  >
-                    <a href='' className='header__home-logo'>
-                      <img src={logoWhite} alt='' className='header__logo' />
-                    </a>
-                  </li>
-                  <li className='main-nav__list-item' role='menuitem'>
-                    <a href='' className='main-nav__list-link'>
-                      <img src={logoHeader} alt='' className='header__logo' />
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <div className='main-nav-cart'>
-                <a href='' className='main-nav-cart-link'>
-                  Cart
-                </a>
-                <span className='main-nav-cart-qty'>{numberOfCartItems}</span>
-              </div>
-              <a
-                href=''
-                className='site-header__hamburger hamburger js-menu-btn'
-              >
-                <span></span>
-              </a>
-            </div>
-          </div>
-        </header>
+        </Link>
+			<NavBarForCart />
         <div id='content' className='site-content'>
           <div id='primary' className='content-area'>
             <main id='main' className='site-main'>
@@ -123,6 +62,6 @@ const Cart = (cart, setCart) => {
       </div>
     </div>
   );
-}};
+};
 
-export default Cart
+export default Cart;

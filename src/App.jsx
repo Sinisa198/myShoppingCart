@@ -1,18 +1,14 @@
-import {Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import Cart from './components/Cart/Cart';
-import HomePage  from './components/Home/homePage';
-import { Routes, Route } from 'react-router-dom';
-import useState from 'react'
+import HomePage  from './components/Home/HomePage';
 import './App.css';
-import Cart from './components/cart/Cart';
-import HomePage from './components/home/Home';
 import CartProvider from './store/cartProvider';
 import Checkout from './components/Checkout';
+import NavBar from "./components/NavBar";
 
-
-export function App() {
+const  App = () => {
   return (
     <div>
       <CartProvider>
