@@ -1,7 +1,7 @@
-import {Routes, Route, NavLink, Switch} from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import Cart from './components/Cart/cartItem';
+import Cart from './components/Cart/Cart';
 import HomePage  from './components/Home/homePage';
 import CartProvider from './store/cartProvider';
 import Checkout from './components/checkout';

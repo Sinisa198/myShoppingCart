@@ -1,16 +1,20 @@
-import React from 'react'
+import {React, useContext} from 'react'
 import { Link } from 'react-router-dom'
 
 
 import logoHeader from '../assets/images/LogoHeader.png'
 import logoFooter from '../assets/images/LogoFooter.png'
 import './Cart/cartItem.css'
-import CartProvider from '../store/cartProvider'
+import CartContext from '../store/cartContex'
 
-function Checkout(item) {
-  
+  const Checkout = () => {
+    
+    const cartCtx = useContext(CartContext);
+    const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
+    const { items } = cartCtx;
+    const numberOfCartItems = items.length;
+
   return (
-		  <CartProvider>
       <div id="page" className="site">
       <a href=""></a>
     <a className="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -41,7 +45,7 @@ function Checkout(item) {
           <div className="main-nav-cart">
             
               <Link  className="main-nav-cart-link" to="/cartItem" >Cart</Link>
-            <span className="main-nav-cart-qty"></span>
+            <span className="main-nav-cart-qty">{numberOfCartItems}</span>
           </div>
         
         <a href="" className="site-header__hamburger hamburger js-menu-btn"><span></span></a>
@@ -57,11 +61,8 @@ function Checkout(item) {
       <div className="cards__container">
         <span className="pretitle">SHOP</span>
         <h2 className="section-title">SAME OLD SAME OLD</h2>
-        <h1 className="checkout_total_price">Total price : {item.totalPrice}</h1>
+        <h1 className="checkout_total_price">Total price : {totalPrice} </h1>
           <div className="row cards__wrapper">
-  
-            
-        
         </div>
       </div>
     </div>
@@ -84,7 +85,6 @@ function Checkout(item) {
     </div>
   </footer>
   </div>
-  </CartProvider>
     );
   };
     

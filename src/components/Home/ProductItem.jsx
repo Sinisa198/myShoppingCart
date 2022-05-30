@@ -1,4 +1,4 @@
-import { React, useContext, useState } from 'react'
+import { React, useContext, useState} from 'react'
 
 import favorite from '../../assets/images/favorite.png'
 import favoriteBorder from '../../assets/images/favorite-border.png'
@@ -32,7 +32,7 @@ import CartContext from '../../store/cartContex'
 			setProducts(product => Number(product)  - 1 )
 		}
 		const handleIncremente = () =>{
-			if(product < 20)
+			if(product < 30)
 			setProducts(product => Number(product) + 1)
 		}
 		
