@@ -10,8 +10,6 @@ import Footer from './Footer';
 const Checkout = () =>{
   const cartCtx = useContext(CartContext);
   const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
-  const { items } = cartCtx;
-  const numberOfCartItems = items.length;
 
   return (
 
@@ -21,6 +19,7 @@ const Checkout = () =>{
         <Link className='skip-link screen-reader-text' to='#content'>
           Skip to content
         </Link>
+
         <NavBarForCheckout />
 
         <div id='content' className='site-content'>

@@ -1,14 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useContext} from 'react'
+
 import logoHeader from '../../assets/images/LogoHeader.png'
 import CartContext from '../../store/CartContex'
 
-const NavBarForCheckout = () => {
+const NavBarForCheckout = (props) => {
 
     const cartCtx = useContext(CartContext);
     const { items } = cartCtx;
     const numberOfCartItems = items.length;
+
   return (
     <header className='header js-site-header'>
     <div className='header__overlay'></div>
@@ -44,7 +46,7 @@ const NavBarForCheckout = () => {
             Cart
           </Link>
           <span className='main-nav-cart-qty'>
-          {numberOfCartItems}
+            {numberOfCartItems}
           </span>
         </div>
 
