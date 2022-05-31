@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-import CartContext from '../store/cartContex';
+import CartContext from '../store/CartContex';
 import {useContext} from 'react'
 
-import logoHeader from '../assets/images/LogoHeader.png';
-import logoFooter from '../assets/images/LogoFooter.png';
-import CartProvider from '../store/cartProvider';
-import './Cart/cartItem.css'
-import NavBarForCheckout from './NavBars/NavBarForCheckout'
+import CartProvider from '../store/CartProvider';
+import './cart/cartItem.css'
+import NavBarForCheckout from './navBars/NavBarForCheckout'
+import Footer from './Footer';
 
 const Checkout = () =>{
   const cartCtx = useContext(CartContext);
@@ -43,22 +42,7 @@ const Checkout = () =>{
           </div>
         </div>
         <div></div>
-        <footer className='footer'>
-          <div className='wrap'>
-            <div className='footer__wrap'>
-              <div className='footer__logo'>
-                <Link to='/' className='header__home'>
-                  <img src={logoFooter} alt='' />
-                </Link>
-              </div>
-              <div className='copyright'>
-                <span>Copyright © 2022 forwardslashny.com</span>{' '}
-                <span className='copyright-line'>|</span>{' '}
-                <span>All Rights Reserved.</span>
-              </div>
-            </div>
-          </div>
-        </footer>
+       <Footer />
       </div>
     </CartProvider>
   );

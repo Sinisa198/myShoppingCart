@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
-import Cart from './components/Cart/Cart';
-import HomePage  from './components/Home/HomePage';
+import Cart from './components/cart/Cart';
+import HomePage  from './components/home/HomePage';
 import './App.css';
-import CartProvider from './store/cartProvider';
+import CartProvider from './store/CartProvider';
 import Checkout from './components/Checkout';
-import NavBar from "./components/NavBars/NavBar";
 
 const  App = () => {
   return (

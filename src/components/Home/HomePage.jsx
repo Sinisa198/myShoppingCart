@@ -2,8 +2,6 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import logoHeader from '../../assets/images/LogoHeader.png';
-import logoFooter from '../../assets/images/LogoFooter.png';
 import ProductItem from './ProductItem';
 import horse from '../../assets/images/horse.png';
 import tv from '../../assets/images/tv.png';
@@ -11,13 +9,13 @@ import camera from '../../assets/images/camera.png';
 import bicycle from '../../assets/images/bicycle.png';
 import car from '../../assets/images/car.png';
 import phone from '../../assets/images/phone.png';
-import CartContext from '../../store/cartContex';
-import NavBar from '../NavBars/NavBar';
+import CartContext from '../../store/CartContex';
+import NavBar from '../navBars/NavBar';
+import Footer from '../Footer'
+
 
 const HomePage = () => {
   const cartCtx = useContext(CartContext);
-
-
 
   const products = [
     {
@@ -89,22 +87,7 @@ const HomePage = () => {
         </div>
       </div>
       <div></div>
-      <footer className='footer'>
-        <div className='wrap'>
-          <div className='footer__wrap'>
-            <div className='footer__logo'>
-              <a href='/' className='header__home'>
-                <img src={logoFooter} alt='' />
-              </a>
-            </div>
-            <div className='copyright'>
-              <span>Copyright © 2022 forwardslashny.com</span>{' '}
-              <span className='copyright-line'>|</span>{' '}
-              <span>All Rights Reservsed.</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

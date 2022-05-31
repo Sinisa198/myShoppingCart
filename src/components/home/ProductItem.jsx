@@ -1,9 +1,8 @@
 import { React, useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import favorite from '../../assets/images/favorite.png';
 import favoriteBorder from '../../assets/images/favorite-border.png';
-import CartContext from '../../store/cartContex';
+import CartContext from '../../store/CartContex';
 
 const ProductItem = ({ name, id, price, image }) => {
   const [product, setProducts] = useState(1);

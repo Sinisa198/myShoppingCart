@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {useContext} from 'react'
 import logoHeader from '../../assets/images/LogoHeader.png'
-import CartContext from '../../store/cartContex'
+import CartContext from '../../store/CartContex'
 
 const NavBarForCheckout = () => {
 

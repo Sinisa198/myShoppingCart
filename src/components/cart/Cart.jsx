@@ -2,9 +2,9 @@ import { React, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import './cartItem.css';
-import CartContext from '../../store/cartContex';
+import CartContext from '../../store/CartContex';
 import CartItem from '../CartItem';
-import NavBarForCart from '../NavBars/NavBarForCart';
+import NavBarForCart from '../navBars/NavBarForCart';
 
 const Cart = (cart, setCart) => {
 	

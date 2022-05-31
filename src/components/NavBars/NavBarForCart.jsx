@@ -4,7 +4,7 @@ import {useContext} from 'react'
 
 import logoHeader from '../../assets/images/LogoHeader.png'
 import logoWhite from '../../assets/images/logo-white.png'
-import CartContext from '../../store/cartContex'
+import CartContext from '../../store/CartContex'
 
 const NavBarForCart = () => {
 
