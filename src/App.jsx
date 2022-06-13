@@ -6,7 +6,6 @@ import HomePage  from './components/home/HomePage';
 import './App.css';
 import CartProvider from './store/CartProvider';
 import Checkout from './components/Checkout';
-
 const  App = () => {
   return (
     <div>

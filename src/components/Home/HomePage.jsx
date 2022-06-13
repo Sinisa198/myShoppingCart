@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import { useState, useEffect } from 'react';
 import ProductItem from './ProductItem';
 import horse from '../../assets/images/horse.png';
 import tv from '../../assets/images/tv.png';
@@ -12,48 +11,18 @@ import phone from '../../assets/images/phone.png';
 import NavBar from '../navBars/NavBar';
 import Footer from '../Footer'
 
-
 const HomePage = () => {
 
-  const products = [
-    {
-      id: '1',
-      name: 'ROCKING HORSE',
-      price: '4994',
-      image: horse,
-    },
-    {
-      id: '2',
-      name: 'OLD DISK ROTARY PHONE',
-      price: '2',
-      image: phone,
-    },
-    {
-      id: '3',
-      name: 'FORD',
-      price: '4994',
-      image: car,
-    },
-    {
-      id: '4',
-      name: 'BICYCLE',
-      price: '10.9',
-      image: bicycle,
-    },
-    {
-      id: '5',
-      name: 'TV',
-      price: '22.3',
-      image: tv,
-    },
-    {
-      id: '6',
-      name: 'RANGEFINDER CAMERA',
-      price: '36.5',
-      image: camera,
-    },
-  ];
+  const [products, setProducts] = useState([])
+  const renderProduct = async () =>{
+    let uri = 'http://127.0.0.1:3000/products';
+    const res = await fetch(uri);
+    const products = await res.json();
+    setProducts(products)
+  }
+  useEffect(() => {renderProduct()}, [])
   return (
+
     <div id="page" className="site">
         <Link className="skip-link screen-reader-text" to="#content">Skip to content</Link>
       <div id='content' className='site-content'>
@@ -86,4 +55,5 @@ const HomePage = () => {
     </div>
   );
 };
+
 export default HomePage;
