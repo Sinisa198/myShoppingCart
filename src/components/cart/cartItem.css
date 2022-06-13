@@ -1,4 +1,4 @@
-/*!
+/* !
 Theme Name: Underscores Starter Theme
 Theme URI: http://underscores.me/
 Author: Underscores.me
@@ -5690,5 +5690,15 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
      font-size:30px;
      text-align:center;
   }
-  
- 
+  .checkout-button{
+    border: 2px solid black;
+    width: 200px;
+    margin-left:43%;
+    margin-top:7%;
+    background-color: black;
+    color:white;
+    height: 40px;
+    padding:5px;
+    border-radius: 60px;
+    font-size:25px
+  }

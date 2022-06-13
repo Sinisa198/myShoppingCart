@@ -5,21 +5,18 @@ import {Link} from 'react-router-dom'
 import CartContext from '../../store/CartContex'
 import logoHeader from '../../assets/images/LogoHeader.png'
 
-
-  
-    
-function NavBar(props) {
+const NavBar = () => {
 
     const cartCtx = useContext(CartContext);
     const { items } = cartCtx;
-    const numberOfCartItems = items.length;
+    const numberOfCartItems  = items.length;
     
   return (
     <header className="header js-site-header">
     <div className="header__overlay"></div>
     <div className="wrap">
         <div className="header__container">
-            <div className="header__home-logo"><a href="/" className ="header__home"> <img src={logoHeader} alt="" className="header__logo"/> </a></div>
+            <div className="header__home-logo"><Link to="/" className ="header__home"> <img src={logoHeader} alt="" className="header__logo"/> </Link></div>
                 <nav className="main-nav">
                     <ul className="main-nav__list" role="menubar">
                             <li className="main-nav__list-item" role="menuitem">
@@ -33,7 +30,7 @@ function NavBar(props) {
                                 </a>
                             </li>
                             <li className="main-nav__list-item" role="menuitem">
-                                <Link to="" className="main-nav__list-link">
+                                <Link to="/" className="main-nav__list-link">
                                     SHOP
                                 </Link>
                             </li>

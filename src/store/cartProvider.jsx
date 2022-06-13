@@ -61,7 +61,7 @@ const CartProvider = (props) => {
   );
 
   const addItemToCartHandler = (item) => {
-    dispatchCartAction({ type: 'ADD', item: item });
+    dispatchCartAction({ type: 'ADD', item });
   };
 
   const removeItemFromCartHandler = (id) => {

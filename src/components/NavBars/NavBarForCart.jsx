@@ -11,6 +11,7 @@ const NavBarForCart = () => {
     const cartCtx = useContext(CartContext);
     const { items } = cartCtx;
     const numberOfCartItems = items.length;
+    
   return (
     <header className='header js-site-header'>
     <div className='header__overlay'></div>

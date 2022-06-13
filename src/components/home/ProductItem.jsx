@@ -1,22 +1,27 @@
 import { React, useContext, useState } from 'react';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import favorite from '../../assets/images/favorite.png';
 import favoriteBorder from '../../assets/images/favorite-border.png';
 import CartContext from '../../store/CartContex';
 
 const ProductItem = ({ name, id, price, image }) => {
-  const [product, setProducts] = useState(1);
 
+  const [product, setProducts] = useState(1);
+  const notify = () => toast("You have added a product to the cart");
   const cartCtx = useContext(CartContext);
 
   const addToCartHandler = (amount) => {
     amount.preventDefault();
+    notify();
     cartCtx.addItem({
       id: id,
       name: name,
       price: price,
       image: image,
       amount: product,
+
     });
   };
 
@@ -25,10 +30,12 @@ const ProductItem = ({ name, id, price, image }) => {
   };
 
   const handleDecremente = () => {
-    if (product > 1) setProducts((product) => Number(product) - 1);
+    if (product > 1) 
+    setProducts((product) => Number(product) - 1);
   };
   const handleIncremente = () => {
-    if (product < 20) setProducts((product) => Number(product) + 1);
+    if (product < 20) 
+    setProducts((product) => Number(product) + 1);
   };
   return (
     <div className='col-xl-4 col-lg-4 col-md-6'>
@@ -70,9 +77,10 @@ const ProductItem = ({ name, id, price, image }) => {
               </button>
             </div>
           </div>
-          <a className='add-to-cart btn' href='' onClick={addToCartHandler}>
+          <a className='add-to-cart btn' href='' onClick={addToCartHandler} >
             ADD TO CART
           </a>
+        <ToastContainer />
           <div className='heart'>
             <img
               src={favorite}

@@ -1,13 +1,15 @@
 import { React, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import './cartItem.css';
 import CartContext from '../../store/CartContex';
 import CartItem from '../CartItem';
 import NavBarForCart from '../navBars/NavBarForCart';
 
 const Cart = (cart, setCart) => {
-	
+  const removeNotify = () => toast("You remove item from cart!");
+
   const cartCtx = useContext(CartContext);
   const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
   const { items } = cartCtx;
@@ -16,6 +18,8 @@ const Cart = (cart, setCart) => {
   const cartItemRemoveHandler = (event, item) => {
     event.preventDefault();
     cartCtx.removeItem(item.id);
+    removeNotify();
+
   };
   return (
     <div>

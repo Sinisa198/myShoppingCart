@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartItem = ({ item, remove }) => {
   return (
@@ -19,6 +21,7 @@ const CartItem = ({ item, remove }) => {
           >
             REMOVE FROM CART
           </Link>
+          <ToastContainer />
         </div>
         <div className='cart__item-price'>
           <span className='cards__price'>Price : ${item.price} </span>

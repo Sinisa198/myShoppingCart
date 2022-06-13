@@ -1,6 +1,6 @@
 import React from 'react';
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+
 
 import ProductItem from './ProductItem';
 import horse from '../../assets/images/horse.png';
@@ -9,13 +9,11 @@ import camera from '../../assets/images/camera.png';
 import bicycle from '../../assets/images/bicycle.png';
 import car from '../../assets/images/car.png';
 import phone from '../../assets/images/phone.png';
-import CartContext from '../../store/CartContex';
 import NavBar from '../navBars/NavBar';
 import Footer from '../Footer'
 
 
 const HomePage = () => {
-  const cartCtx = useContext(CartContext);
 
   const products = [
     {
@@ -55,16 +53,14 @@ const HomePage = () => {
       image: camera,
     },
   ];
-
   return (
     <div id="page" className="site">
-            <Link to=""></Link>
         <Link className="skip-link screen-reader-text" to="#content">Skip to content</Link>
       <div id='content' className='site-content'>
         <div id='primary' className='content-area'>
           <main id='main' className='site-main'>
             <div className='cards'>
-				<NavBar />
+		          <NavBar />
               <div className='wrap'>
                 <div className='cards__container'>
                   <span className='pretitle'>SHOP</span>
@@ -86,7 +82,6 @@ const HomePage = () => {
           </main>
         </div>
       </div>
-      <div></div>
       <Footer />
     </div>
   );
