@@ -5,11 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import favorite from '../../assets/images/favorite.png';
 import favoriteBorder from '../../assets/images/favorite-border.png';
 import CartContext from '../../store/CartContex';
-// import car from '../../assets/images/car.png'
 
 const ProductItem = ({ name, id, price, image }) => {
 
-  const [product, setProducts] = useState(1);
+  const [product, setProducts] = useState(1) ;
   const notify = () => toast("You have added a product to the cart");
   const cartCtx = useContext(CartContext);
 

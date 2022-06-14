@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+
 import ProductItem from './ProductItem';
-// import horse from '../../assets/images/horse.png';
-// import tv from '../../assets/images/tv.png';
-// import camera from '../../assets/images/camera.png';
-// import bicycle from '../../assets/images/bicycle.png';
-// import car from '../../assets/images/car.png';
-// import phone from '../../assets/images/phone.png';
 import NavBar from '../navBars/NavBar';
 import Footer from '../Footer'
 

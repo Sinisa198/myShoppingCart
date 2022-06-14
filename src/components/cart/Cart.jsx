@@ -56,6 +56,7 @@ const Cart = (cart, setCart) => {
                     {items.map((item) => {
                       return <CartItem key={item.id} item={item} remove={cartItemRemoveHandler} />;
                     })}
+                    <ToastContainer />
                   </div>
                 </div>
               </div>

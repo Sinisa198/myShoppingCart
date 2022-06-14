@@ -4,37 +4,37 @@
 "id": 1,
 "name" : "ROCKING HORSE",
 "price": 4994,
-"image": "\/image\/horse.png"
+"image": "\/pictures\/horse.png"
 },
 {
 "id": 2,
 "name": "OLD DISK ROTARY PHONE",
 "price": 2,
-"image": "\/image\/phone.png"
+"image": "\/pictures\/phone.png"
 },
 {
   "id": 3,
   "name": "FORD",
   "price": 4994,
-  "image": "\/image\/car.png"
+  "image": "\/pictures\/car.png"
 },
 {
   "id": 4,
   "name": "BICYCLE",
   "price": 10.9,
-  "image": "\/image\/bicycle.png"
+  "image": "\/pictures\/bicycle.png"
 },
 {
 "id": 5,
 "name": "TV",
 "price": 22.3,
-"image": "\/image\/tv.png"
+"image": "\/pictures\/tv.png"
 },
 {
   "id": 6,
   "name": "RANGEFINDER CAMERA",
   "price": 36.5,
-  "image": "\/image\/camera.png"
+  "image": "\/pictures\/camera.png"
 }
 ]
 }
