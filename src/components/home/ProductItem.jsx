@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import favorite from '../../assets/images/favorite.png';
 import favoriteBorder from '../../assets/images/favorite-border.png';
 import CartContext from '../../store/CartContex';
+// import car from '../../assets/images/car.png'
 
 const ProductItem = ({ name, id, price, image }) => {
 
@@ -42,7 +43,7 @@ const ProductItem = ({ name, id, price, image }) => {
       <div className='cards__item'>
         <div className='cards__item-body'>
           <div className='cards__item-body-image'>
-            <img src={image} alt='slika' className='cards__item-img' />
+          <img src={image}  alt={image} className='cards__item-img' />
           </div>
           <span className='cards__item-body-name'>{name}</span>
           <span className='cards__item-body-price'>${price}</span>

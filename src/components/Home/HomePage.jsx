@@ -2,25 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ProductItem from './ProductItem';
-import horse from '../../assets/images/horse.png';
-import tv from '../../assets/images/tv.png';
-import camera from '../../assets/images/camera.png';
-import bicycle from '../../assets/images/bicycle.png';
-import car from '../../assets/images/car.png';
-import phone from '../../assets/images/phone.png';
+// import horse from '../../assets/images/horse.png';
+// import tv from '../../assets/images/tv.png';
+// import camera from '../../assets/images/camera.png';
+// import bicycle from '../../assets/images/bicycle.png';
+// import car from '../../assets/images/car.png';
+// import phone from '../../assets/images/phone.png';
 import NavBar from '../navBars/NavBar';
 import Footer from '../Footer'
 
 const HomePage = () => {
 
   const [products, setProducts] = useState([])
-  const renderProduct = async () =>{
-    let uri = 'http://127.0.0.1:3000/products';
-    const res = await fetch(uri);
+  const fetchAndDisplay = async () =>{
+    let url = 'http://127.0.0.1:5000/products';
+    const res = await fetch(url);
     const products = await res.json();
     setProducts(products)
   }
-  useEffect(() => {renderProduct()}, [])
+  useEffect(() => {fetchAndDisplay()}, [])
   return (
 
     <div id="page" className="site">
@@ -35,6 +35,7 @@ const HomePage = () => {
                   <span className='pretitle'>SHOP</span>
                   <h2 className='section-title'>SAME OLD SAME OLD</h2>
                   <div className='row cards__wrapper'>
+                    
                     {products.map((item) => (
                       <ProductItem
                         key={item.id}
@@ -44,6 +45,7 @@ const HomePage = () => {
                         image={item.image}
                       />
                     ))}
+
                   </div>
                 </div>
               </div>
