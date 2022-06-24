@@ -12,8 +12,8 @@ const ProductItem = ({ name, id, price, image }) => {
   const notify = () => toast("You have added a product to the cart");
   const notifyFavorite = () =>
     toast("You have added a product to the favorite");
-  const cartCtx = useContext(CartContext);
 
+  const cartCtx = useContext(CartContext);
   const addToCartHandler = (amount) => {
     amount.preventDefault();
     notify();
@@ -25,9 +25,9 @@ const ProductItem = ({ name, id, price, image }) => {
       amount: product,
     });
   };
-  const addFavorite = (amount) => {
-    amount.preventDefault();
-    notify();
+  const addFavorite = (e) => {
+    e.preventDefault();
+    notifyFavorite();
     cartCtx.addItem({
       id: id,
       name: name,
@@ -36,6 +36,7 @@ const ProductItem = ({ name, id, price, image }) => {
       amount: product,
     });
   };
+
   const submitHandler = (event) => {
     event.preventDefault();
   };

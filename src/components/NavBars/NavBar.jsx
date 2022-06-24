@@ -9,7 +9,7 @@ const NavBar = () => {
   const cartCtx = useContext(CartContext);
   const { items } = cartCtx;
   const numberOfCartItems = items.length;
-  const numberOfFavorite = items.length;
+
   return (
     <header className="header js-site-header">
       <div className="header__overlay"></div>
@@ -26,7 +26,7 @@ const NavBar = () => {
               <li className="main-nav__list-item" role="menuitem">
                 <Link to="/favorite" className="main-nav__list-link">
                   FAVORITE
-                  <span className="main-nav-cart-qty">{numberOfFavorite}</span>
+                  <span className="main-nav-cart-qty">{numberOfCartItems}</span>
                 </Link>
               </li>
               <li className="main-nav__list-item" role="menuitem">
