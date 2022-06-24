@@ -1,60 +1,64 @@
-import { React, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { React, useContext } from "react";
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import CartContext from '../../store/CartContex';
-import CartItem from '../CartItem';
-import NavBarForCart from '../navBars/NavBarForCart';
+import CartContext from "../../store/CartContex";
+import CartItem from "../CartItem";
+import NavBarForCart from "../navBars/NavBarForCart";
 
-const Cart = (cart, setCart) => {
+const Cart = () => {
   const removeNotify = () => toast("You remove item from cart!");
 
   const cartCtx = useContext(CartContext);
   const totalPrice = `$${cartCtx.totalAmount.toFixed(2)}`;
   const { items } = cartCtx;
-  const numberOfCartItems = items.length;
-	
+
   const cartItemRemoveHandler = (event, item) => {
     event.preventDefault();
     cartCtx.removeItem(item.id);
     removeNotify();
-
   };
   return (
     <div>
-      <div id='page' className='site'>
-        <Link className='skip-link screen-reader-text' to='#content'>
+      <div id="page" className="site">
+        <Link className="skip-link screen-reader-text" to="#content">
           Skip to content
         </Link>
-			<NavBarForCart />
-        <div id='content' className='site-content'>
-          <div id='primary' className='content-area'>
-            <main id='main' className='site-main'>
-              <div className='cart'>
-                <div className='wrap'>
-                  <div className='cart__container'>
-                    <div className='cart__top'>
-                      <div className='cart__top-btn'>
-                        <Link className='btn btn--black' to='/'>
+        <NavBarForCart />
+        <div id="content" className="site-content">
+          <div id="primary" className="content-area">
+            <main id="main" className="site-main">
+              <div className="cart">
+                <div className="wrap">
+                  <div className="cart__container">
+                    <div className="cart__top">
+                      <div className="cart__top-btn">
+                        <Link className="btn btn--black" to="/">
                           BACK TO SHOP
                         </Link>
                       </div>
-                      <div className='cart__title'>
-                        <span className='pretitle'> SHOP</span>
-                        <h2 className='section-title'>SAME OLD SAME OLD</h2>
-                        <h3 className='total-price'>
+                      <div className="cart__title">
+                        <span className="pretitle"> SHOP</span>
+                        <h2 className="section-title">SAME OLD SAME OLD</h2>
+                        <h3 className="total-price">
                           Total price : {totalPrice}
                         </h3>
                       </div>
-                      <div className='cart__top-btn'>
-                        <Link className='btn btn--black' to='/checkout'>
+                      <div className="cart__top-btn">
+                        <Link className="btn btn--black" to="/checkout">
                           CHECKOUT
                         </Link>
                       </div>
                     </div>
                     {items.map((item) => {
-                      return <CartItem key={item.id} item={item} remove={cartItemRemoveHandler} />;
+                      return (
+                        <CartItem
+                          key={item.id}
+                          item={item}
+                          remove={cartItemRemoveHandler}
+                        />
+                      );
                     })}
                     <ToastContainer />
                   </div>

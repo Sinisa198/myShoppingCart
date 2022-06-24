@@ -1,16 +1,16 @@
 {
   "products" : [
 {
-"id": 1,
-"name" : "ROCKING HORSE",
-"price": 4994,
-"image": "\/pictures\/horse.png"
+  "id": 1,
+  "name" : "ROCKING HORSE",
+  "price": 4994,
+  "image": "\/pictures\/horse.png"
 },
 {
-"id": 2,
-"name": "OLD DISK ROTARY PHONE",
-"price": 2,
-"image": "\/pictures\/phone.png"
+  "id": 2,
+  "name": "OLD DISK ROTARY PHONE",
+  "price": 2,
+  "image": "\/pictures\/phone.png"
 },
 {
   "id": 3,
@@ -25,10 +25,10 @@
   "image": "\/pictures\/bicycle.png"
 },
 {
-"id": 5,
-"name": "TV",
-"price": 22.3,
-"image": "\/pictures\/tv.png"
+  "id": 5,
+  "name": "TV",
+  "price": 22.3,
+  "image": "\/pictures\/tv.png"
 },
 {
   "id": 6,

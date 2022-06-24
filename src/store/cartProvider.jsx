@@ -1,5 +1,5 @@
-import CartContext from './CartContex';
-import { useReducer } from 'react';
+import CartContext from "./CartContex";
+import { useReducer } from "react";
 
 const defaultCartState = {
   items: [],
@@ -7,7 +7,7 @@ const defaultCartState = {
 };
 
 const cartReducer = (state, action) => {
-  if (action.type === 'ADD') {
+  if (action.type === "ADD") {
     const updatedTotalAmount =
       state.totalAmount + action.item.price * action.item.amount;
 
@@ -33,21 +33,22 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
-  if (action.type === 'REMOVE') {
+  if (action.type === "REMOVE") {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
     );
     const existingItem = state.items[existingCartItemIndex];
 
-    const updatedTotalAmount = state.totalAmount  -  existingItem.amount * existingItem.price;
+    const updatedTotalAmount =
+      state.totalAmount - existingItem.amount * existingItem.price;
     let updatedItems;
-    if (existingItem.amount ) {
+    if (existingItem.amount) {
       updatedItems = state.items.filter((item) => item.id !== action.id);
     }
 
     return {
       items: updatedItems,
-      totalAmount: updatedTotalAmount
+      totalAmount: updatedTotalAmount,
     };
   }
 
@@ -61,11 +62,17 @@ const CartProvider = (props) => {
   );
 
   const addItemToCartHandler = (item) => {
-    dispatchCartAction({ type: 'ADD', item });
+    dispatchCartAction({ type: "ADD", item });
+  };
+  const addFavorite = (item) => {
+    dispatchCartAction({ type: "ADD", item });
   };
 
   const removeItemFromCartHandler = (id) => {
-    dispatchCartAction({ type: 'REMOVE', id });
+    dispatchCartAction({ type: "REMOVE", id });
+  };
+  const removeFromFavoriteHandler = (id) => {
+    dispatchCartAction({ type: "REMOVE", id });
   };
 
   const cartContext = {
@@ -73,6 +80,8 @@ const CartProvider = (props) => {
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    addFavorite: addFavorite,
+    removeFromFavorite: removeFromFavoriteHandler,
   };
 
   return (
