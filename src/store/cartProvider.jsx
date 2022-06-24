@@ -64,7 +64,7 @@ const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {
     dispatchCartAction({ type: "ADD", item });
   };
-  const addFavorite = (item) => {
+  const addItemToFavoriteHandle = (item) => {
     dispatchCartAction({ type: "ADD", item });
   };
 
@@ -80,7 +80,7 @@ const CartProvider = (props) => {
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
-    addFavorite: addFavorite,
+    addFavorite: addItemToFavoriteHandle,
     removeFromFavorite: removeFromFavoriteHandler,
   };
 

@@ -25,17 +25,17 @@ const ProductItem = ({ name, id, price, image }) => {
       amount: product,
     });
   };
-  const addToFavorite = (e) => {
-    e.preventDefault();
-    notifyFavorite();
-    cartCtx.addFavorite({
+  const addFavorite = (amount) => {
+    amount.preventDefault();
+    notify();
+    cartCtx.addItem({
       id: id,
       name: name,
       price: price,
       image: image,
+      amount: product,
     });
   };
-
   const submitHandler = (event) => {
     event.preventDefault();
   };
@@ -96,12 +96,13 @@ const ProductItem = ({ name, id, price, image }) => {
               src={favorite}
               alt="heart"
               className="heart-icon heart__full"
-              onClick={addToFavorite}
+              onClick={addFavorite}
             />
             <img
               src={favoriteBorder}
               alt="heart"
               className="heart-icon heart__empty"
+              onClick={addFavorite}
             />
           </div>
         </div>

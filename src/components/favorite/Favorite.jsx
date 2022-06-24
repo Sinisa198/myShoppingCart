@@ -8,7 +8,7 @@ const Favorite = () => {
   const cartCtx = useContext(CartContext);
   const { items } = cartCtx;
 
-  const removeItemFromCartHandler = (event, item) => {
+  const cartItemRemoveHandler = (event, item) => {
     event.preventDefault();
     cartCtx.removeItem(item.id);
   };
@@ -21,7 +21,7 @@ const Favorite = () => {
           <FavoriteItem
             key={item.id}
             item={item}
-            remove={removeItemFromCartHandler}
+            remove={cartItemRemoveHandler}
           />
         );
       })}

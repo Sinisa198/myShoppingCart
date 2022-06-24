@@ -1,4 +1,6 @@
-const FavoriteItem = ({ item }) => {
+import { Link } from "react-router-dom";
+
+const FavoriteItem = ({ item, remove }) => {
   return (
     <div className="row-cart__favorite">
       <div key={item.id} className="cart__item">
@@ -8,7 +10,15 @@ const FavoriteItem = ({ item }) => {
         <div className="cart__item-details">
           <span className="cart__item-name">{item.name}</span>
         </div>
-        <div className="cart__item-button"></div>
+        <div className="cart__item-button">
+          <Link
+            className="btn btn--sm"
+            to=""
+            onClick={(event) => remove(event, item)}
+          >
+            REMOVE FROM CART
+          </Link>
+        </div>
         <div className="cart__item-price"></div>
       </div>
     </div>
