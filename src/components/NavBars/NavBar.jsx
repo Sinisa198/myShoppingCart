@@ -1,14 +1,19 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
 import CartContext from "../../store/CartContex";
 import logoHeader from "../../assets/images/LogoHeader.png";
+import useFavoriteContext from "../../store/FavoriteContex";
 
 const NavBar = () => {
   const cartCtx = useContext(CartContext);
   const { items } = cartCtx;
   const numberOfCartItems = items.length;
+  console.log(items);
+
+  const favoriteCtx = useContext(useFavoriteContext);
+  const { favoriteItems } = favoriteCtx;
+  const numberOfFavoriteItems = favoriteItems.length;
+  console.log(favoriteItems);
 
   return (
     <header className="header js-site-header">
@@ -26,7 +31,9 @@ const NavBar = () => {
               <li className="main-nav__list-item" role="menuitem">
                 <Link to="/favorite" className="main-nav__list-link">
                   FAVORITE
-                  <span className="main-nav-cart-qty">{numberOfCartItems}</span>
+                  <span className="main-nav-cart-qty">
+                    {numberOfFavoriteItems}
+                  </span>
                 </Link>
               </li>
               <li className="main-nav__list-item" role="menuitem">
@@ -44,8 +51,8 @@ const NavBar = () => {
           <div className="main-nav-cart">
             <Link className="main-nav-cart-link" to="/cart">
               Cart
+              <span className="main-nav-cart-qty">{numberOfCartItems}</span>
             </Link>
-            <span className="main-nav-cart-qty">{numberOfCartItems}</span>
           </div>
         </div>
       </div>

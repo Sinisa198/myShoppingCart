@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import favorite from "../../assets/images/favorite.png";
 import favoriteBorder from "../../assets/images/favorite-border.png";
 import CartContext from "../../store/CartContex";
+import FavoriteContext from "../../store/FavoriteContex";
 
 const ProductItem = ({ name, id, price, image }) => {
   const [product, setProducts] = useState(1);
@@ -25,10 +26,12 @@ const ProductItem = ({ name, id, price, image }) => {
       amount: product,
     });
   };
-  const addFavorite = (e) => {
-    e.preventDefault();
+
+  const favoriteCtx = useContext(FavoriteContext);
+  const addToFavoriteHandler = (amount) => {
+    amount.preventDefault();
     notifyFavorite();
-    cartCtx.addItem({
+    favoriteCtx.addFavoriteItem({
       id: id,
       name: name,
       price: price,
@@ -97,13 +100,12 @@ const ProductItem = ({ name, id, price, image }) => {
               src={favorite}
               alt="heart"
               className="heart-icon heart__full"
-              onClick={addFavorite}
+              onClick={addToFavoriteHandler}
             />
             <img
               src={favoriteBorder}
               alt="heart"
               className="heart-icon heart__empty"
-              onClick={addFavorite}
             />
           </div>
         </div>

@@ -2,30 +2,28 @@ import React from "react";
 import NavBar from "../navBars/NavBar";
 import FavoriteItem from "./FavoriteItem";
 import { useContext } from "react";
-import CartContext from "../../store/CartContex";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import FavoriteContext from "../../store/FavoriteContex";
 
 const Favorite = () => {
-  const cartCtx = useContext(CartContext);
-  const { items } = cartCtx;
-  const removeFavorite = () => toast("You remove item from favorite");
-  const cartItemRemoveHandler = (event, item) => {
+  const favoriteCtx = useContext(FavoriteContext);
+  const { favoriteItems } = favoriteCtx;
+  const favoriteItemRemoveHandler = (event, item) => {
     event.preventDefault();
-    removeFavorite();
-    cartCtx.removeItem(item.id);
+    favoriteCtx.removeItem(item.id);
   };
   return (
     <div>
       <ToastContainer />
       <h1 className="favorite-title">FAVORITE</h1>
       <NavBar />
-      {items.map((item) => {
+      {favoriteItems.map((item) => {
         return (
           <FavoriteItem
             key={item.id}
             item={item}
-            remove={cartItemRemoveHandler}
+            remove={favoriteItemRemoveHandler}
           />
         );
       })}

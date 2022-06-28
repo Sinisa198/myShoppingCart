@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import ProductItem from "./ProductItem";
 import NavBar from "../navBars/NavBar";
 import Footer from "../Footer";
-import env from "react-dotenv";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);

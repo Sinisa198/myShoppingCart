@@ -7,6 +7,7 @@ import "./App.css";
 import CartProvider from "./store/CartProvider";
 import Checkout from "./components/Checkout";
 import Favorite from "./components/favorite/Favorite";
+import FavoriteProvider from "./store/FavoriteProvider";
 
 const App = () => {
   return (

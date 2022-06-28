@@ -64,15 +64,9 @@ const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {
     dispatchCartAction({ type: "ADD", item });
   };
-  const addItemToFavoriteHandle = (item) => {
-    dispatchCartAction({ type: "ADD", item });
-  };
 
   const removeItemFromCartHandler = (id) => {
     dispatchCartAction({ type: "REMOVE", id });
-  };
-  const removeFromFavoriteHandler = (idFavorite) => {
-    dispatchCartAction({ type: "REMOVE", idFavorite });
   };
 
   const cartContext = {
@@ -80,9 +74,8 @@ const CartProvider = (props) => {
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
-    addFavorite: addItemToFavoriteHandle,
-    removeFromFavorite: removeFromFavoriteHandler,
   };
+
   return (
     <CartContext.Provider value={cartContext}>
       {props.children}
