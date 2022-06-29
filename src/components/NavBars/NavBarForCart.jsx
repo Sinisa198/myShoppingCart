@@ -7,12 +7,12 @@ import logoWhite from "../../assets/images/logo-white.png";
 import CartContext from "../../store/CartContex";
 import FavoriteContext from "../../store/FavoriteContex";
 const NavBarForCart = () => {
-  const cartCtx = useContext(CartContext);
-  const { items } = cartCtx;
-  const numberOfCartItems = items.length;
-  const favoriteCtx = useContext(FavoriteContext);
-  const { favoriteItems } = favoriteCtx;
-  const numberOfFavoriteItems = favoriteItems.length;
+  // const cartCtx = useContext(CartContext);
+  // const { items } = cartCtx;
+  // const numberOfCartItems = items.length;
+  // const favoriteCtx = useContext(FavoriteContext);
+  // const { favoriteItems } = favoriteCtx;
+  // const numberOfFavoriteItems = favoriteItems.length;
 
   return (
     <header className="header js-site-header">
@@ -31,9 +31,9 @@ const NavBarForCart = () => {
                 <Link to="/favorite" className="main-nav__list-link">
                   <img src={logoHeader} alt="" className="header__logo" />
                   FAVORITE{" "}
-                  <span className="main-nav-cart-qty">
+                  {/* <span className="main-nav-cart-qty">
                     {numberOfFavoriteItems}
-                  </span>
+                  </span> */}
                 </Link>
               </li>
               <li className="main-nav__list-item" role="menuitem">
@@ -66,7 +66,7 @@ const NavBarForCart = () => {
             <Link to="/cart" className="main-nav-cart-link">
               Cart
             </Link>
-            <span className="main-nav-cart-qty">{numberOfCartItems}</span>
+            {/* <span className="main-nav-cart-qty">{numberOfCartItems}</span> */}
           </div>
           <Link to="" className="site-header__hamburger hamburger js-menu-btn">
             <span></span>

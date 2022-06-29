@@ -13,12 +13,14 @@ const App = () => {
   return (
     <div>
       <CartProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/favorite" element={<Favorite />} />
-        </Routes>
+        <FavoriteProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/favorite" element={<Favorite />} />
+          </Routes>
+        </FavoriteProvider>
       </CartProvider>
     </div>
   );

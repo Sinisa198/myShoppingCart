@@ -10,10 +10,10 @@ const NavBar = () => {
   const numberOfCartItems = items.length;
   console.log(items);
 
-  const favoriteCtx = useContext(useFavoriteContext);
-  const { favoriteItems } = favoriteCtx;
-  const numberOfFavoriteItems = favoriteItems.length;
-  console.log(favoriteItems);
+  // const favoriteCtx = useContext(useFavoriteContext);
+  // const { fItems } = favoriteCtx;
+  // const numberOfFavoriteItems = fItems.length;
+  // console.log(items);
 
   return (
     <header className="header js-site-header">
@@ -31,9 +31,9 @@ const NavBar = () => {
               <li className="main-nav__list-item" role="menuitem">
                 <Link to="/favorite" className="main-nav__list-link">
                   FAVORITE
-                  <span className="main-nav-cart-qty">
+                  {/* <span className="main-nav-cart-qty">
                     {numberOfFavoriteItems}
-                  </span>
+                  </span> */}
                 </Link>
               </li>
               <li className="main-nav__list-item" role="menuitem">

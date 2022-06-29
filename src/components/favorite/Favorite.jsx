@@ -8,17 +8,17 @@ import FavoriteContext from "../../store/FavoriteContex";
 
 const Favorite = () => {
   const favoriteCtx = useContext(FavoriteContext);
-  const { favoriteItems } = favoriteCtx;
+  const { items } = favoriteCtx;
   const favoriteItemRemoveHandler = (event, item) => {
     event.preventDefault();
-    favoriteCtx.removeItem(item.id);
+    favoriteCtx.removeFavoriteItem(item.id);
   };
   return (
     <div>
       <ToastContainer />
       <h1 className="favorite-title">FAVORITE</h1>
       <NavBar />
-      {favoriteItems.map((item) => {
+      {items.map((item) => {
         return (
           <FavoriteItem
             key={item.id}
